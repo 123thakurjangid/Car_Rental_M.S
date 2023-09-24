@@ -1,0 +1,15 @@
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\bin\Debug\net6.0\Car_Rental.Business.deps.json
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\bin\Debug\net6.0\Car_Rental.Business.dll
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\bin\Debug\net6.0\Car_Rental.Business.pdb
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\bin\Debug\net6.0\Car_Rental.Data.dll
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\bin\Debug\net6.0\Car_Rental.Data.pdb
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\obj\Debug\net6.0\Car_Rental.Business.csproj.AssemblyReference.cache
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\obj\Debug\net6.0\Car_Rental.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\obj\Debug\net6.0\Car_Rental.Business.AssemblyInfoInputs.cache
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\obj\Debug\net6.0\Car_Rental.Business.AssemblyInfo.cs
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\obj\Debug\net6.0\Car_Rental.Business.csproj.CoreCompileInputs.cache
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\obj\Debug\net6.0\Car_Rental.Business.csproj.CopyComplete
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\obj\Debug\net6.0\Car_Rental.Business.dll
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\obj\Debug\net6.0\refint\Car_Rental.Business.dll
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\obj\Debug\net6.0\Car_Rental.Business.pdb
+C:\Users\thaku\OneDrive\Documents\Visual Studio Projects\Car Rental Management System\Car_Rental.Business\obj\Debug\net6.0\ref\Car_Rental.Business.dll

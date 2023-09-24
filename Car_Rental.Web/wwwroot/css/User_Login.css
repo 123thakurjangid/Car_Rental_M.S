@@ -1,0 +1,20 @@
+﻿                                    /*********Login-Form-Css*********/
+form{
+    text-align:center;
+    align-content:center;
+}
+#lbl1{
+    margin-left:-58vh;
+}
+#lbl2{
+    margin-left:-62vh;
+}
+img{
+    margin-top:10vh;
+    width:60vh;
+    margin-left:50vh;
+}
+body{
+    background-color:whitesmoke;
+}
+

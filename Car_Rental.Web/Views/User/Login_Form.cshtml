@@ -1,0 +1,14 @@
+﻿@model Car_Rental.Business.Model.LoginModel
+
+<img src="~/Car_Images/Lambo.png"/>
+
+<form asp-action="Login_Form" asp-controller="User" method="post">
+    <label id="lbl1">Email address</label><br />
+    <input class="col-sm-5" type="email" asp-for="User_Email" placeholder="Enter User id" /><br />
+    <span asp-validation-for="User_Email"></span><br />
+    <label id="lbl2">Password</label><br />
+    <input class="col-sm-5" type="password" asp-for="User_Password" placeholder="Password" /><br />
+    <span asp-validation-for="User_Password"></span><br />
+    <input class="col-sm-5  btn btn-outline-warning" type="submit" value="Login" /><br />
+    @Html.ActionLink("If you are a new user", "Registration_Page")
+</form>
