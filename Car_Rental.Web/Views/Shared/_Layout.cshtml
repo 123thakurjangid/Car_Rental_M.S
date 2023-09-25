@@ -22,15 +22,42 @@
                     <ul class="navbar-nav flex-grow-1">
                         @if (!string.IsNullOrEmpty(HttpContextAccessor.HttpContext.Session.GetString("UserEmail")))
                             {
+                            var logby = HttpContextAccessor.HttpContext.Session.GetString("LoginBy");
+                            if (logby == "Customer")
+                            {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Cars</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Pending Rents</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogOut">LogOut</a>
                                 </li>
+          
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Car</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Customers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Rentals</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Returns</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogOut">LogOut</a>
+                                </li>
+                            }
+
                         }
                         else
                         {

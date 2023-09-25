@@ -37,6 +37,7 @@ namespace Car_Rental.Web.Controllers
                 {
                     HttpContext.Session.SetString("UserEmail", result.USER_EMAIL.ToString());
                     HttpContext.Session.SetString("UserID", result.ID.ToString());
+                    HttpContext.Session.SetString("LoginBy", Loginby);
 
                     return Json("Login by Customer");
                 }

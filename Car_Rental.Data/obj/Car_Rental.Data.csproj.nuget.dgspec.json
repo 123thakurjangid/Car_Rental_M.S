@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thaku\\OneDrive\\Documents\\Visual Studio Projects\\Car Rental Management System\\Car_Rental.Data\\Car_Rental.Data.csproj": {}
+    "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thaku\\OneDrive\\Documents\\Visual Studio Projects\\Car Rental Management System\\Car_Rental.Data\\Car_Rental.Data.csproj": {
+    "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thaku\\OneDrive\\Documents\\Visual Studio Projects\\Car Rental Management System\\Car_Rental.Data\\Car_Rental.Data.csproj",
+        "projectUniqueName": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj",
         "projectName": "Car_Rental.Data",
-        "projectPath": "C:\\Users\\thaku\\OneDrive\\Documents\\Visual Studio Projects\\Car Rental Management System\\Car_Rental.Data\\Car_Rental.Data.csproj",
+        "projectPath": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj",
         "packagesPath": "C:\\Users\\thaku\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thaku\\OneDrive\\Documents\\Visual Studio Projects\\Car Rental Management System\\Car_Rental.Data\\obj\\",
+        "outputPath": "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thaku\\AppData\\Roaming\\NuGet\\NuGet.Config",
