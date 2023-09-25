@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Car_Rental.Web.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/User_Login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Admin.css" asp-append-version="true" />
 </head>
 <body>
     <header>
@@ -26,6 +27,9 @@
                             if (logby == "Customer")
                             {
                                 <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Home</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Cars</a>
                                 </li>
                                 <li class="nav-item">
@@ -39,10 +43,10 @@
                             else
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Home</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Admin_Pannel">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Car</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Add_New_Car">Car</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Customers</a>

@@ -46,7 +46,7 @@ namespace Car_Rental.Web.Controllers
                     HttpContext.Session.SetString("UserEmail", result.USER_EMAIL.ToString());
                     HttpContext.Session.SetString("UserID", result.ID.ToString());
 
-                    return Json("Login by Admin");
+                    return RedirectToAction("Admin_Pannel","Admin");
                 }
                 else
                 {

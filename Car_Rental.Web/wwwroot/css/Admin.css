@@ -1,0 +1,63 @@
+﻿                        /*********** Admin-Panel-Css **********/
+#AdminPanelH {
+    background-color: white;
+    box-shadow: 5px 10px #888888;
+}
+.panelimg{
+    width:40vh;
+    margin-left:0%;
+    margin-bottom:-3vh;
+}
+.panelimg1 {
+    width: 40vh;
+    margin-left: 0%;
+    margin-bottom: -3vh;
+    margin-top: -2vh;
+}
+tr{
+    text-align:center;
+    align-items:center;
+    padding-top:-2vh;
+}
+td{
+    padding:1vh;
+}
+
+                        /*********** Add-New-Car-Css **********/
+
+.column{
+    float:left;
+    width:50%;
+}
+.row:after{
+    display:table;
+    clear:both;
+}
+#rightcolimg{
+    margin-left:0%;
+    padding-top:10vh;
+}
+
+.row {
+    align-content: center;
+    text-align: center;
+    margin-top: 10vh;
+}
+#acl1{
+    margin-left:-46vh;
+}
+#acl2{
+    margin-left:-57vh;
+}
+#acl3 {
+    margin-left: -56.5vh;
+}
+#acl4 {
+    margin-left: -58vh;
+}
+#acl5 {
+    margin-left: -57.4vh;
+}
+#acl6 {
+    margin-left: -54vh;
+}

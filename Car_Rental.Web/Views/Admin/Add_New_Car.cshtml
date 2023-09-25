@@ -1,0 +1,39 @@
+﻿@model Car_Rental.Business.Model.CarModel
+
+<div class="row">
+    <div class="column">
+        <h2>Add Cars</h2>
+        <form asp-controller="Admin" asp-action="SaveCar" method="post">
+
+            <label id="acl1">Car Plate Number</label><br />
+            <input class="col-sm-9" asp-for="Plate_Number" placeholder="Enter Plate Number" /><br />
+            <span asp-validation-for="Plate_Number"></span><br />
+
+            <label id="acl2">Brand</label><br />
+            <input class="col-sm-9" type="text" asp-for="Company" placeholder="Enter the Car's Brand" /><br />
+            <span asp-validation-for="Company"></span><br />
+
+            <label id="acl3">Model</label><br />
+            <input class="col-sm-9" type="text" asp-for="Model" placeholder="Enter Model" /> <br />
+            <span asp-validation-for="Model"></span><br />
+
+            <label id="acl4">Price</label><br />
+            <input class="col-sm-9" type="text" asp-for="Price" placeholder="Enter Price" /> <br />
+            <span asp-validation-for="Price"></span><br />
+
+            <label id="acl5">Color</label><br />
+            <input class="col-sm-9" type="text" asp-for="Color" placeholder="Enter Color" /> <br />
+            <span asp-validation-for="Color"></span><br />
+
+            <label id="acl6">Available</label><br />
+            <input class="col-sm-9" type="text" asp-for="Available" placeholder="Available or Not" /><br />
+            <span asp-validation-for="Available"></span><br />
+
+            <input class="col-sm-9 btn btn-outline-warning" type="submit" placeholder="Save" />
+
+        </form>
+    </div>
+    <div class="column">
+        <img id="rightcolimg" src="~/AdminPanelCars/Mustang Gt.png" />
+    </div>
+</div>
