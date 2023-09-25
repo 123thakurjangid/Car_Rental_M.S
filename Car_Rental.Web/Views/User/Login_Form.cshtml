@@ -8,6 +8,10 @@
     <span asp-validation-for="User_Email"></span><br />
     <label id="lbl2">Password</label><br />
     <input class="col-sm-5" type="password" asp-for="User_Password" placeholder="Password" /><br />
+    <div class="LoginBy">
+    @Html.RadioButton("Loginby","Customer",true)<text>Customer</text>
+    @Html.RadioButton("Loginby","Admin")<text>Admin</text><br />
+    </div>
     <span asp-validation-for="User_Password"></span><br />
     <input class="col-sm-5  btn btn-outline-warning" type="submit" value="Login" /><br />
     @Html.ActionLink("If you are a new user", "Registration_Page")

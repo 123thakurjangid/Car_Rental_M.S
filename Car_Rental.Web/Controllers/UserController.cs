@@ -23,7 +23,7 @@ namespace Car_Rental.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login_Form(LoginModel model)
+        public IActionResult Login_Form(LoginModel model,string Loginby)
         {
             if (!ModelState.IsValid)
             {
@@ -33,10 +33,25 @@ namespace Car_Rental.Web.Controllers
             var result = loginService.login(model);
             if (result != null && result.ID > 0)
             {
-                HttpContext.Session.SetString("UserEmail", result.USER_EMAIL.ToString());
-                HttpContext.Session.SetString("UserID", result.ID.ToString());
+                if (Loginby == "Customer")
+                {
+                    HttpContext.Session.SetString("UserEmail", result.USER_EMAIL.ToString());
+                    HttpContext.Session.SetString("UserID", result.ID.ToString());
 
-                return Json(result);
+                    return Json("Login by Customer");
+                }
+                else if(Loginby == "Admin" && result.USER_EMAIL == "123Thakurjangid@gmail.com")
+                {
+                    HttpContext.Session.SetString("UserEmail", result.USER_EMAIL.ToString());
+                    HttpContext.Session.SetString("UserID", result.ID.ToString());
+
+                    return Json("Login by Admin");
+                }
+                else
+                {
+                    TempData["Message"] = "Login failed The Admin Username or password are incorrect!";
+                    return RedirectToAction("Login_Form");
+                }
             }
             else
             {
