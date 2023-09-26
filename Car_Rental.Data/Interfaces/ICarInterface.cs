@@ -9,6 +9,7 @@ namespace Car_Rental.Data.Interfaces
 {
     public interface ICarInterface
     {
+        List<Car> getcars();
         public bool SaveCar(Car car);
     }
 }

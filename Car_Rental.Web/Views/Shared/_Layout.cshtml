@@ -27,6 +27,9 @@
                             if (logby == "Customer")
                             {
                                 <li class="nav-item">
+                                    <a style="cursor:pointer" class="nav-link text-dark" data-bs-toggle="offcanvas" data-bs-target="#demo">Menu</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Home</a>
                                 </li>
                                 <li class="nav-item">
@@ -43,10 +46,13 @@
                             else
                             {
                                 <li class="nav-item">
+                                    <a style="cursor:pointer" class="nav-link text-dark" data-bs-toggle="offcanvas" data-bs-target="#demo">Menu</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Admin_Pannel">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Add_New_Car">Car</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="AvailableCars">Cars</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Customers</a>
@@ -79,7 +85,35 @@
             @RenderBody()
         </main>
     </div>
-
+        @if (@HttpContextAccessor.HttpContext.Session.GetString("LoginBy") == "Customer")
+        {
+              @*Menue bar Code starting*@
+              <div class="offcanvas offcanvas-start" id="demo">
+                  <div class="offcanvas-header">
+                      <h1 class="offcanvas-title"> Menu</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                      <p>Some text lorem ipsum.</p>
+                      <p>Some text lorem ipsum.</p>
+                  </div>
+              </div>
+              @*Menue bar Code Ending*@
+        }
+        else
+        {
+        <div class="offcanvas offcanvas-start" id="demo">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title"> Menu</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p><a class="nav-link text-dark" asp-controller="Admin" asp-action="Add_New_Car">&#128073; Add New Cars</a></p>
+                <p>Some text lorem ipsum.</p>
+                <p>Some text lorem ipsum.</p>
+            </div>
+        </div>
+        }
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2023 - Car_Rental.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>

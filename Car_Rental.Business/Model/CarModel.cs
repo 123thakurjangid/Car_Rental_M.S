@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,18 +13,11 @@ namespace Car_Rental.Business.Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Car_Id { get; set; }
-        [Required(ErrorMessage = "Please Enter Car PlateNum !")]
         public string? Plate_Number { get; set; }
-        [Required(ErrorMessage = "Please Enter Car Company !")]
         public string? Company { get; set; }
-        [Required(ErrorMessage = "Please Enter Car Model !")]
         public string? Model { get; set; }
-        [Required(ErrorMessage = "Please Enter Car Prize !")]
         public int Price { get; set; }
-        [Required(ErrorMessage = "Please Enter Car Color !")]
         public string? Color { get; set; }
-        [Required(ErrorMessage = "Please Enter Car Available or Not !")]
         public string? Available { get; set; }
 
     }

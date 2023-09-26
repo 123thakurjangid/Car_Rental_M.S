@@ -21,5 +21,9 @@ namespace Car_Rental.Data.Repositorys
             _context.Add(car);
             return _context.SaveChanges() > 0?true:false;
         }
+        public List<Car> getcars( )
+        {
+            return _context.Car.ToList();
+        }
     }
 }

@@ -19,15 +19,16 @@ namespace Car_Rental.Web.Controllers
         }
 
         public IActionResult Add_New_Car()
-        {
-            return View();
+        {       
+            CarModel model = new CarModel();
+            return View(model);
         }
 
         [HttpPost]
-        public IActionResult SaveCar(CarModel model)
+        public IActionResult Save_Cars(CarModel carModel)
         {          
 
-            bool result = _carService.AddCar(model);
+            bool result = _carService.AddCar(carModel);
 
             if (result)
             {
@@ -39,6 +40,14 @@ namespace Car_Rental.Web.Controllers
                 TempData["Message"] = "Car  Not Added !";
                 return RedirectToAction("Add_New_Car", "Admin");
             }
+        }
+
+        [HttpGet]
+        public IActionResult AvailableCars()
+        {
+            List<CarModel> cars = new List<CarModel>();
+            cars = _carService.getAllCars();
+            return View(cars);
         }
     }
 }

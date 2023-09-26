@@ -25,7 +25,6 @@ namespace Car_Rental.Business.Service
 
             Car car = new Car();
 
-            car.CAR_ID = model.Car_Id;
             car.PLATE_NUMBER = model.Plate_Number;
             car.COMPANY = model.Company;
             car.MODEL = model.Model;
@@ -36,6 +35,19 @@ namespace Car_Rental.Business.Service
             result = carInterface.SaveCar(car);
 
             return result;
+        }
+        public List<CarModel> getAllCars()
+        {
+            return carInterface.getcars().Select(x => new CarModel
+            {
+                Plate_Number = x.PLATE_NUMBER,
+                Company = x.COMPANY,
+                Model = x.MODEL,
+                Price = x.PRICE,
+                Color = x.COLOR,
+                Available = x.AVAILABLE
+
+            }).ToList();
         }
     }
 }

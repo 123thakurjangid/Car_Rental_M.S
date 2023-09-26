@@ -70,7 +70,7 @@
         "projectName": "Car_Rental.Data",
         "projectPath": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj",
         "packagesPath": "C:\\Users\\thaku\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Data\\obj\\",
+        "outputPath": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thaku\\AppData\\Roaming\\NuGet\\NuGet.Config",

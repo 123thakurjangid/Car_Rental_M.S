@@ -37,6 +37,9 @@ td{
     margin-left:0%;
     padding-top:10vh;
 }
+.col-sm-9{
+    margin-bottom:2vh;
+}
 
 .row {
     align-content: center;

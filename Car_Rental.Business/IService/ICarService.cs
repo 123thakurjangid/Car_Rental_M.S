@@ -10,5 +10,6 @@ namespace Car_Rental.Business.IService
     public interface ICarService
     {
         bool AddCar(CarModel carModel);
+        List<CarModel> getAllCars();
     }
 }
