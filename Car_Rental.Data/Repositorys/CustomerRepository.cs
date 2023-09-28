@@ -20,7 +20,7 @@ namespace Car_Rental.Data.Repositorys
         public bool SaveCustomer(Customer customer)
         {
             _context.Customer.Add(customer);
-            return _context.SaveChanges()>0?true:false;
+            return _context.SaveChanges() > 0 ? true : false;
         }
     }
 }

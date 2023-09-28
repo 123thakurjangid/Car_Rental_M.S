@@ -2,6 +2,7 @@
 using Car_Rental.Business.Model;
 using Car_Rental.Business.Service;
 using Car_Rental.Data.DbContexts;
+using Car_Rental.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Car_Rental.Web.Controllers
@@ -26,7 +27,7 @@ namespace Car_Rental.Web.Controllers
                 return View("Add_New_Customer", customers);
             }
 
-            bool result = false;
+            bool result = _customerService.AddCustomer(customers);
 
             result = _customerService.AddCustomer(customers);
 
@@ -37,10 +38,12 @@ namespace Car_Rental.Web.Controllers
             }
             else
             {
-                TempData["Message"] = "Customer  Not Added !";
-                return RedirectToAction("Add_New_Customer", "Admin");
+                TempData["Message"] = "Customer Not Added !";
+                return RedirectToAction("Add_New_Customer", "Customer");
             }
         }
+
+        
 
         public IActionResult Edit_New_Customer()
         {

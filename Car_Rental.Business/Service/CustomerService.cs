@@ -31,7 +31,7 @@ namespace Car_Rental.Business.Service
             model.CUSTOMER_PHONE = customer.Customer_Phone;
             model.CUSTOMER_CITY = customer.Customer_City;
 
-            customerInterface.SaveCustomer(model);
+            result = customerInterface.SaveCustomer(model);
             return result;
         }
     }
