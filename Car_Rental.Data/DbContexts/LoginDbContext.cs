@@ -24,5 +24,7 @@ namespace Car_Rental.Data.DbContexts
         public DbSet<Login> Login { get; set; }
 
         public DbSet<Car> Car { get; set; }
+
+        public DbSet<Customer> Customer { get; set; }
     }
 }

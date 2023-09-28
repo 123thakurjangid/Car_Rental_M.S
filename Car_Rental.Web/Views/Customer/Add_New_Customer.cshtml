@@ -1,0 +1,32 @@
+﻿@model Car_Rental.Business.Model.CustomerModel
+
+<div class="row">
+    <div class="column">
+        <h2>Add Customer</h2>
+        <form class="CustomerForm" asp-action="Save_Customer" asp-controller="Customer" method="post">
+
+            <label >Customer Name</label><br />
+            <input class="col-sm-11" asp-for="Customer_Name" placeholder="Please Enter Name" /><br />
+            <span class="text-danger" asp-validation-for="Customer_Name"></span><br />
+
+            <label >Customer Address</label><br />
+            <input class="col-sm-11" type="text" asp-for="Customer_Address" placeholder="Please Enter Address" /><br />
+            <span class="text-danger" asp-validation-for="Customer_Address"></span><br />
+
+            <label >Customer Phone</label><br />
+            <input class="col-sm-11" type="text" asp-for="Customer_Phone" placeholder="Please Enter Phone" /> <br />
+            <span class="text-danger" asp-validation-for="Customer_Phone"></span><br />
+
+            <label >Customer City</label><br />
+            <input class="col-sm-11" type="text" asp-for="Customer_City" placeholder="Please Enter City" /> <br />
+            <span class="text-danger" asp-validation-for="Customer_City"></span><br />
+
+            <input class="col-sm-11 btn btn-outline-warning" type="submit" value="Save" />
+
+        </form>
+    </div>
+    <div class="column">
+        <img id="rightcolimg" src="~/AdminPanelCars/Mustang Gt.png" />
+    </div>
+</div>
+

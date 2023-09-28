@@ -25,10 +25,14 @@ namespace Car_Rental.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Save_Cars(CarModel carModel)
+        public IActionResult Save_Cars(CarModel Car)
         {          
+            if(!ModelState.IsValid)
+            {
+                return View("Add_New_Car", Car);
+            }
 
-            bool result = _carService.AddCar(carModel);
+            bool result = _carService.AddCar(Car);
 
             if (result)
             {

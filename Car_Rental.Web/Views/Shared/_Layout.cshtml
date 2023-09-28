@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="~/Car_Rental.Web.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/User_Login.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Admin.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Customer.css" asp-append-version="true" />
 </head>
 <body>
     <header>
@@ -26,7 +27,7 @@
                             var logby = HttpContextAccessor.HttpContext.Session.GetString("LoginBy");
                             if (logby == "Customer")
                             {
-                                <li class="nav-item">
+                                <li class="nav-item1">
                                     <a style="cursor:pointer" class="nav-link text-dark" data-bs-toggle="offcanvas" data-bs-target="#demo">Menu</a>
                                 </li>
                                 <li class="nav-item">
@@ -45,7 +46,7 @@
                             }
                             else
                             {
-                                <li class="nav-item">
+                                <li class="nav-item1">
                                     <a style="cursor:pointer" class="nav-link text-dark" data-bs-toggle="offcanvas" data-bs-target="#demo">Menu</a>
                                 </li>
                                 <li class="nav-item">
@@ -109,8 +110,7 @@
             </div>
             <div class="offcanvas-body">
                 <p><a class="nav-link text-dark" asp-controller="Admin" asp-action="Add_New_Car">&#128073; Add New Cars</a></p>
-                <p>Some text lorem ipsum.</p>
-                <p>Some text lorem ipsum.</p>
+                <p><a class="nav-link text-dark" asp-controller="Customer" asp-action="Add_New_Customer">&#128073; Add New Customer</a></p>
             </div>
         </div>
         }

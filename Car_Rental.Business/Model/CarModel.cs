@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -13,11 +14,18 @@ namespace Car_Rental.Business.Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Required(ErrorMessage = "Please Enter Car Plate Num!")]
         public string? Plate_Number { get; set; }
+        [Required(ErrorMessage = "Please Enter Car Company!")]
         public string? Company { get; set; }
+        [Required(ErrorMessage = "Please Enter Car Model!")]
         public string? Model { get; set; }
+        [Required(ErrorMessage = "Please Enter Car Price!")]
+        [Range(500, 7000, ErrorMessage = "Price must be in 500 to 7000!")]
         public int Price { get; set; }
+        [Required(ErrorMessage = "Please Enter Car Color!")]
         public string? Color { get; set; }
+        [Required(ErrorMessage = "Please Enter Car Available or Not!")]
         public string? Available { get; set; }
 
     }

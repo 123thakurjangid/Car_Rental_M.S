@@ -9,21 +9,18 @@ using System.Threading.Tasks;
 
 namespace Car_Rental.Data.Repositorys
 {
-    public class CarRepository : ICarInterface
+    public class CustomerRepository : ICustomerInterface
     {
         private readonly LoginDbContext _context;
-        public CarRepository() 
+        public CustomerRepository() 
         {
             _context = new LoginDbContext();
         }
-        public bool SaveCar(Car car)
+
+        public bool SaveCustomer(Customer customer)
         {
-            _context.Car.Add(car);
-            return _context.SaveChanges() > 0?true:false;
-        }
-        public List<Car> getcars( )
-        {
-            return _context.Car.ToList();
+            _context.Customer.Add(customer);
+            return _context.SaveChanges()>0?true:false;
         }
     }
 }
