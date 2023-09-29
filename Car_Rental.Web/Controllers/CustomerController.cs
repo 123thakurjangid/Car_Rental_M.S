@@ -1,4 +1,5 @@
-﻿using Car_Rental.Business.IService;
+﻿using Azure.Core;
+using Car_Rental.Business.IService;
 using Car_Rental.Business.Model;
 using Car_Rental.Business.Service;
 using Car_Rental.Data.DbContexts;
@@ -43,12 +44,32 @@ namespace Car_Rental.Web.Controllers
             }
         }
 
+        [HttpGet]
         public IActionResult Customers()
         {
             List<CustomerModel> custm = new List<CustomerModel>();
             custm = _customerService.GetCustomer();
             return View(custm);
         }
+
+        public IActionResult Delete(int Id)
+        {
+            if(Id == 0)
+            {
+                TempData["Message"] = "Record not found to delte !";
+            }
+            if (_customerService.Delete(Id))
+            {
+                TempData["Message"] = "Record Deleted Successfully";
+
+            }
+            else
+            {
+                TempData["Message"] = "Record not deleted !";
+            }
+            return RedirectToAction("Customers", "Customer");
+        }
+
         public IActionResult Edit_New_Customer()
         {
             return View();

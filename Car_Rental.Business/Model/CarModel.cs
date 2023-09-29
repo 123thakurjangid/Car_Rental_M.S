@@ -14,6 +14,9 @@ namespace Car_Rental.Business.Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Car_Id { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required(ErrorMessage = "Please Enter Car Plate Num!")]
         public string? Plate_Number { get; set; }
         [Required(ErrorMessage = "Please Enter Car Company!")]

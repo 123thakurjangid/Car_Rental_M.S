@@ -35,6 +35,11 @@ namespace Car_Rental.Business.Service
             return result;
         }
 
+        public bool Delete(int id)
+        {
+            return customerInterface.Delete(id);
+        }
+
         public List<CustomerModel> GetCustomer()
         {
             return customerInterface.GetCustomer().Select(x => new CustomerModel

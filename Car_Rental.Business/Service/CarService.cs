@@ -25,6 +25,7 @@ namespace Car_Rental.Business.Service
 
             Car car = new Car();
 
+            car.CAR_ID = model.Car_Id;
             car.PLATE_NUMBER = model.Plate_Number;
             car.COMPANY = model.Company;
             car.MODEL = model.Model;
@@ -36,10 +37,17 @@ namespace Car_Rental.Business.Service
 
             return result;
         }
+
+        public bool Delete(int Id)
+        {
+            return carInterface.Delete(Id);
+        }
+
         public List<CarModel> getAllCars()
         {
             return carInterface.getcars().Select(x => new CarModel
             {
+                Car_Id = x.CAR_ID,
                 Plate_Number = x.PLATE_NUMBER,
                 Company = x.COMPANY,
                 Model = x.MODEL,

@@ -52,5 +52,23 @@ namespace Car_Rental.Web.Controllers
             cars = _carService.getAllCars();
             return View(cars);
         }
+
+        public IActionResult Delete(int Id)
+        {
+            if (Id == 0)
+            {
+                TempData["Message"] = "Record not found to delte !";
+            }
+            if (_carService.Delete(Id))
+            {
+                TempData["Message"] = "Record Deleted Successfully";
+
+            }
+            else
+            {
+                TempData["Message"] = "Record not deleted !";
+            }
+            return RedirectToAction("AvailableCars", "Admin");
+        }
     }
 }

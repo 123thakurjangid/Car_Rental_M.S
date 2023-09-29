@@ -25,5 +25,20 @@ namespace Car_Rental.Data.Repositorys
         {
             return _context.Car.ToList();
         }
+
+        public bool Delete(int Id)
+        {
+            var Car = _context.Car.Find(Id);
+
+            if( Car != null )
+            {
+                _context.Car.Remove(Car);
+                return _context.SaveChanges()>0?true:false;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

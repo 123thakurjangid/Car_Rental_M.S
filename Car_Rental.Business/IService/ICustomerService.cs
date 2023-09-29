@@ -10,6 +10,7 @@ namespace Car_Rental.Business.IService
     public interface ICustomerService
     {
         bool AddCustomer(CustomerModel customer);
+        bool Delete(int id);
         List<CustomerModel> GetCustomer();
     }
 }

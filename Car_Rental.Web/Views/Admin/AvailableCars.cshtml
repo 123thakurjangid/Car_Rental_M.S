@@ -3,6 +3,9 @@
 <table class="table table-dark table-striped table-hover">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.Car_Id)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Plate_Number)
         </th>
         <th>
@@ -26,6 +29,9 @@
     {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.Car_Id)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Plate_Number)
             </td>
             <td>
@@ -44,7 +50,7 @@
                 @Html.DisplayFor(modelItem => item.Available)
             </td>
             <td>
-                @Html.ActionLink("Delete", "Delete"/*, new { id = item.Book_Id}*/)
+                @Html.ActionLink("Delete", "Delete", new { id = item.Car_Id})
             </td>
         </tr>
     }
