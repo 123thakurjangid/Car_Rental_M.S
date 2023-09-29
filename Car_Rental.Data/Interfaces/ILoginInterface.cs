@@ -9,6 +9,7 @@ namespace Car_Rental.Data.Interfaces
 {
     public interface ILoginInterface
     {
+        List<Login> GetCustomer();
         Login? login(Login login);
         public bool SaveUser(Login login);
     }

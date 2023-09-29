@@ -49,10 +49,6 @@
       "PackagePath": "staticwebassets\\css\\Admin.css"
     },
     {
-      "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\css\\Customer.css",
-      "PackagePath": "staticwebassets\\css\\Customer.css"
-    },
-    {
       "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\css\\User_Login.css",
       "PackagePath": "staticwebassets\\css\\User_Login.css"
     },

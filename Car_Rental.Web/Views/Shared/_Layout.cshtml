@@ -56,7 +56,10 @@
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="AvailableCars">Cars</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Customers">Customers</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Customers">Customers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="OfflineCustomers">Offline Customers</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Rentals</a>
@@ -110,7 +113,7 @@
             </div>
             <div class="offcanvas-body">
                 <p><a class="nav-link text-dark" asp-controller="Admin" asp-action="Add_New_Car">&#128073; Add New Cars</a></p>
-                <p><a class="nav-link text-dark" asp-controller="Customer" asp-action="Add_New_Customer">&#128073; Add New Customer</a></p>
+                <p><a class="nav-link text-dark" asp-controller="User" asp-action="Add_New_Customer">&#128073; Add New Offline Customer</a></p>
             </div>
         </div>
         }

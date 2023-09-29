@@ -1,4 +1,5 @@
-﻿using Car_Rental.Business.IService;
+﻿using Azure.Core;
+using Car_Rental.Business.IService;
 using Car_Rental.Business.Model;
 using Car_Rental.Data.Entities;
 using Car_Rental.Data.Interfaces;
@@ -32,6 +33,16 @@ namespace Car_Rental.Business.Service
             result = _loginInterface.SaveUser(login);
 
             return result;
+        }
+
+        public List<LoginModel> GetUsers()
+        {
+            return _loginInterface.GetCustomer().Select(x => new LoginModel
+            {
+                Id = x.ID,
+                User_Email = x.USER_EMAIL,
+                User_Password = x.USER_PASSWORD
+            }).ToList();
         }
 
         public Login? login(LoginModel loginModel)

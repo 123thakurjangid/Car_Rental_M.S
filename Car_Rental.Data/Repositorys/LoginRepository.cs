@@ -17,6 +17,11 @@ namespace Car_Rental.Data.Repositorys
             _context = new LoginDbContext();
         }
 
+        public List<Login> GetCustomer()
+        {
+            return _context.Login.ToList();
+        }
+
         public Login? login(Login login)
         {
             if (login == null || string.IsNullOrEmpty(login.USER_EMAIL) || string.IsNullOrEmpty(login.USER_PASSWORD))

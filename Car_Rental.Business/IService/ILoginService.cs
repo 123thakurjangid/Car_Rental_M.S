@@ -11,6 +11,7 @@ namespace Car_Rental.Business.IService
     public interface ILoginService
     {
        bool AddUser(LoginModel loginModel);
-       Login? login(LoginModel model);
+        List<LoginModel> GetUsers();
+        Login? login(LoginModel model);
     }
 }

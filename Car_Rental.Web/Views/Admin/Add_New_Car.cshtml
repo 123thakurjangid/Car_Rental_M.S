@@ -2,34 +2,34 @@
 
 <div class="row">
     <div class="column">
-        <h2>Add Cars</h2>
+        <h2 class="formH text-dark">Add Cars</h2>
         <form class="CustomerForm" asp-action="Save_Cars" asp-controller="Admin" method="post">
 
             <label >Car Plate Number</label><br />
-            <input class="col-sm-11" asp-for="Plate_Number" placeholder="Enter Plate Number" /><br />
+            <input class="col-sm-9" asp-for="Plate_Number" placeholder="Enter Plate Number" /><br />
             <span class="text-danger" asp-validation-for="Plate_Number"></span><br />
 
             <label >Brand</label><br />
-            <input class="col-sm-11" type="text" asp-for="Company" placeholder="Enter the Car's Brand" /><br />
+            <input class="col-sm-9" type="text" asp-for="Company" placeholder="Enter the Car's Brand" /><br />
             <span class="text-danger" asp-validation-for="Company"></span><br />
 
             <label >Model</label><br />
-            <input class="col-sm-11" type="text" asp-for="Model" placeholder="Enter Model" /> <br />
+            <input class="col-sm-9" type="text" asp-for="Model" placeholder="Enter Model" /> <br />
             <span class="text-danger" asp-validation-for="Model"></span><br />
 
             <label >Price</label><br />
-            <input class="col-sm-11" type="text" asp-for="Price" placeholder="Enter Price" /> <br />
+            <input class="col-sm-9" type="text" asp-for="Price" placeholder="Enter Price" /> <br />
             <span class="text-danger" asp-validation-for="Price"></span><br />
 
             <label >Color</label><br />
-            <input class="col-sm-11" type="text" asp-for="Color" placeholder="Enter Color" /> <br />
+            <input class="col-sm-9" type="text" asp-for="Color" placeholder="Enter Color" /> <br />
             <span class="text-danger" asp-validation-for="Color"></span><br />
 
             <label >Available</label><br />
-            <input class="col-sm-11" type="text" asp-for="Available" placeholder="Available or Not" /><br />
+            <input class="col-sm-9" type="text" asp-for="Available" placeholder="Available or Not" /><br />
             <span class="text-danger" asp-validation-for="Available"></span><br />
 
-            <input class="col-sm-11 btn btn-outline-warning" type="submit" value="Save" />
+            <input class="col-sm-9 btn btn-outline-warning" type="submit" value="Save" />
 
         </form>
     </div>

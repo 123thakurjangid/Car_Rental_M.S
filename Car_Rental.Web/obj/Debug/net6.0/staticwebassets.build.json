@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XZ+kSUmer8agjuM4EfLq4/mFj7zQwacfu7k1mCaaKJ4=",
+  "Hash": "EY0IkdHZOnLY8VrXjJbL6kZoIuVpILxAJG6ARwQCWks=",
   "Source": "Car_Rental.Web",
   "BasePath": "_content/Car_Rental.Web",
   "Mode": "Default",
@@ -236,23 +236,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Admin.css"
-    },
-    {
-      "Identity": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\css\\Customer.css",
-      "SourceId": "Car_Rental.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\",
-      "BasePath": "_content/Car_Rental.Web",
-      "RelativePath": "css/Customer.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Customer.css"
     },
     {
       "Identity": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\css\\site.css",

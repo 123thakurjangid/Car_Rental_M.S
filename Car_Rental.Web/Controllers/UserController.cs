@@ -8,9 +8,11 @@ namespace Car_Rental.Web.Controllers
     public class UserController : Controller
     {
         private readonly ILoginService loginService;
+        private readonly ICustomerService _customerService;
         public UserController() 
         {
             loginService = new LoginService();
+            _customerService = new CustomerService();
         }
         public IActionResult Registration_Page()
         {
@@ -88,6 +90,69 @@ namespace Car_Rental.Web.Controllers
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Login_Form");
+        }
+
+        [HttpGet]
+        public IActionResult Customers()
+        {
+            List<LoginModel> user = new List<LoginModel>();
+            user = loginService.GetUsers();
+            return View(user);
+
+        }
+
+        public IActionResult Add_New_Customer()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Save_Customer(CustomerModel customers)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("Add_New_Customer", customers);
+            }
+
+            bool result = _customerService.AddCustomer(customers);
+
+            result = _customerService.AddCustomer(customers);
+
+            if (result)
+            {
+                TempData["Message"] = "Customer Added Successfully";
+                return Json("true");
+            }
+            else
+            {
+                TempData["Message"] = "Customer Not Added !";
+                return RedirectToAction("Add_New_Customer", "Customer");
+            }
+        }
+
+        [HttpGet]
+        public IActionResult OfflineCustomers()
+        {
+            List<CustomerModel> custm = new List<CustomerModel>();
+            custm = _customerService.GetCustomer();
+            return View(custm);
+        }
+
+        public IActionResult Delete(int Id)
+        {
+            if (Id == 0)
+            {
+                TempData["Message"] = "Record not found to delte !";
+            }
+            if (_customerService.Delete(Id))
+            {
+                TempData["Message"] = "Record Deleted Successfully";
+
+            }
+            else
+            {
+                TempData["Message"] = "Record not deleted !";
+            }
+            return RedirectToAction("OfflineCustomers", "User");
         }
     }
 }

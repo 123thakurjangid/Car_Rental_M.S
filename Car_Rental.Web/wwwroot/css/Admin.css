@@ -61,3 +61,12 @@ td{
 #acl6 {
     margin-left: -54vh;
 }
+.CustomerForm {
+    text-align: left;
+    justify-content: left;
+}
+.formH{
+    text-align:left;
+    margin-left:19vh;
+    margin-bottom:2vh;
+}
