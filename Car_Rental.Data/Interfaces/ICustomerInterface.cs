@@ -9,6 +9,7 @@ namespace Car_Rental.Data.Interfaces
 {
     public interface ICustomerInterface
     {
+        List<Customer> GetCustomer();
         public bool SaveCustomer(Customer customer);
     }
 }

@@ -34,5 +34,17 @@ namespace Car_Rental.Business.Service
             result = customerInterface.SaveCustomer(model);
             return result;
         }
+
+        public List<CustomerModel> GetCustomer()
+        {
+            return customerInterface.GetCustomer().Select(x => new CustomerModel
+            {
+                Customer_Id = x.CUSTOMER_ID,
+                Customer_Name = x.CUSTOMER_NAME,
+                Customer_Address = x.CUSTOMER_ADDRESS,
+                Customer_Phone = x.CUSTOMER_PHONE,
+                Customer_City = x.CUSTOMER_CITY
+            }).ToList();
+        }
     }
 }

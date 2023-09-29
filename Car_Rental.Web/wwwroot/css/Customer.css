@@ -1,6 +1,10 @@
-﻿                        /*********** Admin-Panel-Css **********/
+﻿                        /*********** Customer-Css **********/
 .CustomerForm{
     text-align:left;
     justify-content:left;
     margin-left:10vh;
+}
+                        /*********** Customers-Css **********/
+#customertbl{
+    margin-top:4vh;
 }

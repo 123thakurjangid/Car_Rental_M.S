@@ -17,9 +17,14 @@ namespace Car_Rental.Data.Repositorys
             _context = new LoginDbContext();
         }
 
-        public bool SaveCustomer(Customer customer)
+        public List<Customer> GetCustomer()
         {
-            _context.Customer.Add(customer);
+            return _context.Customer.ToList();
+        }
+
+        public bool SaveCustomer(Customer Customerli)
+        {
+            _context.Customer.Add(Customerli);
             return _context.SaveChanges() > 0 ? true : false;
         }
     }

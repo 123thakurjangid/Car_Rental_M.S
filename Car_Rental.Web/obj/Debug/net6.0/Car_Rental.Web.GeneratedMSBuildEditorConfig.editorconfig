@@ -9,49 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Car_Rental.Web
 build_property.RootNamespace = Car_Rental.Web
-build_property.ProjectDir = C:\Users\thaku\Source\Repos\Car_Rental_M.S\Car_Rental.Web\
+build_property.ProjectDir = C:\Users\thaku\source\repos\Car_Rental_M.S\Car_Rental.Web\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\thaku\Source\Repos\Car_Rental_M.S\Car_Rental.Web
+build_property.MSBuildProjectDirectory = C:\Users\thaku\source\repos\Car_Rental_M.S\Car_Rental.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/Add_New_Car.cshtml]
+[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/Add_New_Car.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkX05ld19DYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/Admin_Pannel.cshtml]
+[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/Admin_Pannel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5fUGFubmVsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/AvailableCars.cshtml]
+[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/AvailableCars.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXZhaWxhYmxlQ2Fycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Customer/Add_New_Customer.cshtml]
+[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Customer/Add_New_Customer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQWRkX05ld19DdXN0b21lci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Customer/Customers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQ3VzdG9tZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/User/Login_Form.cshtml]
+[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/User/Login_Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbl9Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/User/Registration_Page.cshtml]
+[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/User/Registration_Page.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3RyYXRpb25fUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/_ViewImports.cshtml]
+[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/_ViewStart.cshtml]
+[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Shared/_Layout.cshtml]
+[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-a1rf4j9dsf

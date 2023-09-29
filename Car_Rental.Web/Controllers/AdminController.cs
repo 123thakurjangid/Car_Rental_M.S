@@ -3,6 +3,7 @@ using Car_Rental.Business.Model;
 using Car_Rental.Business.Service;
 using Car_Rental.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 
 namespace Car_Rental.Web.Controllers
 {
@@ -45,8 +46,6 @@ namespace Car_Rental.Web.Controllers
                 return RedirectToAction("Add_New_Car", "Admin");
             }
         }
-
-        [HttpGet]
         public IActionResult AvailableCars()
         {
             List<CarModel> cars = new List<CarModel>();

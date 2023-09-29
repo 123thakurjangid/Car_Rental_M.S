@@ -43,8 +43,12 @@ namespace Car_Rental.Web.Controllers
             }
         }
 
-        
-
+        public IActionResult Customers()
+        {
+            List<CustomerModel> custm = new List<CustomerModel>();
+            custm = _customerService.GetCustomer();
+            return View(custm);
+        }
         public IActionResult Edit_New_Customer()
         {
             return View();
