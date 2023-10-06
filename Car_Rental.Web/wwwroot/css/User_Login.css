@@ -20,3 +20,11 @@ body{
 .LoginBy{
     margin-left:-52vh;
 }
+                                    /*********Customers-Css*********/
+#AdminChecked{
+    background-color:red;
+    padding-bottom:4px;
+    padding-right:1vh;
+    padding-left:1vh;
+    border-radius:25px;
+}

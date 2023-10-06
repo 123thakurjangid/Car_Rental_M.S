@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Car_Rental.Business.Model.LoginModel>
+@inject IHttpContextAccessor HttpContextAccessor
 
 <div class="row">
     <div class="column">
@@ -45,15 +46,33 @@
                         @Html.DisplayFor(modelItem => item.Id)
                     </td>
                     <td>
-                        @*@if()*@
-                        @Html.DisplayFor(modelItem => item.User_Email)
+                        @{
+                            var AdminChecker = HttpContextAccessor.HttpContext.Session.GetString("LoginBy");
+
+                            if (AdminChecker == "Admin" && item.User_Email == "123Thakurjangid@gmail.com")
+                            {
+                                <p><k class="text-white" id="AdminChecked">Admin</k> @Html.DisplayFor(modelItem => item.User_Email)</p>
+                            }
+                            else
+                            {
+                                @Html.DisplayFor(modelItem => item.User_Email)
+                            }
+                          }
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.User_Password)
                     </td>
-                    <td>
-                        @Html.ActionLink("Delete", "Delete", new { id = item.Id})
-                    </td>
+
+                    @if (AdminChecker == "Admin" && item.User_Email == "123Thakurjangid@gmail.com")
+                    {
+                        <td class="text-danger">Non-deletable</td>
+                    }
+                    else
+                    {
+                        <td>
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id})
+                        </td>
+                    }
                 </tr>
             }
         </table>

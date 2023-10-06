@@ -1,6 +1,7 @@
 ﻿using Car_Rental.Business.IService;
 using Car_Rental.Business.Model;
 using Car_Rental.Business.Service;
+using Car_Rental.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Car_Rental.Web.Controllers
@@ -46,7 +47,8 @@ namespace Car_Rental.Web.Controllers
                 else if(Loginby == "Admin" && result.USER_EMAIL == "123Thakurjangid@gmail.com")
                 {
                     HttpContext.Session.SetString("UserEmail", result.USER_EMAIL.ToString());
-                    HttpContext.Session.SetString("UserID", result.ID.ToString());
+                    HttpContext.Session.SetInt32("UserID", result.ID);
+                    HttpContext.Session.SetString("LoginBy", Loginby);
 
                     return RedirectToAction("Admin_Pannel","Admin");
                 }
