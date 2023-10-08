@@ -32,4 +32,15 @@ namespace Car_Rental.Business.Model
         public string? Available { get; set; }
 
     }
+
+    /*for passing data with the help of userhome -> select*/
+    public class User_Home_SelectModel
+    {
+        public int Car_Id { get; set; }
+        public string? Customer_Name { get; set; }
+        public DateTime Return_Date { get; set; }
+        public string? Plate_Number { get; set; }
+        public string? Model { get; set; }
+        public int Price { get; set; }
+    }
 }

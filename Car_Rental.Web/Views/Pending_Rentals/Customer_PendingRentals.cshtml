@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Car_Rental.Business.Model.Pending_RentalsModel>
+
+    <h1>Pending Rentals</h1>
+<hr />
+<table class="table table-dark table-striped table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Car_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plate_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rent_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Return_Date)
+        </th>
+        <th>
+            Fees
+        </th>
+        <th>
+            Status
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Car_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Plate_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rent_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Return_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <th>
+                Booked
+            </th>
+            <td>
+                @Html.ActionLink("Remove", "Delete", new { id = item.Car_Id})
+            </td>
+        </tr>
+    }
+</table>

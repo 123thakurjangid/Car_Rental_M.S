@@ -1,0 +1,51 @@
+﻿@model Car_Rental.Business.Model.UpdateModel
+
+@*<form style="margin-top:5vh;" method="post" asp-action="UpdateCustomer" asp-controller="User">
+
+    <label>Customer Id</label><br />
+    <input asp-for="Id" class="col-sm-5" readonly/><br />
+    <span class="text-danger"></span><br />
+
+    <label>Customer Mail</label><br />
+    <input asp-for="User_Email" class="col-sm-5" type="text" /><br />
+    <span class="text-danger"></span><br />
+
+    <label>Customer Password</label><br />
+    <input asp-for="User_Password" class="col-sm-5" type="text" /> <br />
+    <span class="text-danger"></span><br />
+
+    <input class="col-sm-5 btn btn-outline-warning" type="submit" value="Update" />
+
+</form>
+*@
+
+<div class="row">
+    <div class="column">
+
+        <img id="rightcolimg" src="~/AdminPanelCars/Mustang Gt.png" />
+
+    </div>
+    <div class="column">
+
+        <h2 class="formHH text-dark">Updating Online Customers</h2>
+        <hr id="hr" />
+
+        <form class="CustUpdateForm" method="post" asp-action="UpdateCustomer" asp-controller="User">
+
+            <label class="cl1">Customer Id</label><br />
+            <input class="col-sm-9" asp-for="Id" placeholder="Enter Plate Number" readonly/><br />
+            <span  class="text-danger" asp-validation-for="Id"></span><br />
+
+            <label class="cl2">Customer Mail</label><br />
+            <input class="col-sm-9" type="text" asp-for="User_Email" placeholder="Enter the Car's Brand" required/><br />
+            <span  class="text-danger" asp-validation-for="User_Email"></span><br />
+
+            <label class="cl3">Customer Password</label><br />
+            <input class="col-sm-9" type="text" asp-for="User_Password" placeholder="Enter Model" required/> <br />
+            <span  class="text-danger" asp-validation-for="User_Password"></span><br />
+
+            <input class="col-sm-9 btn btn-outline-warning" type="submit" value="Save" />
+
+        </form>
+    </div>
+</div>

@@ -20,11 +20,43 @@ body{
 .LoginBy{
     margin-left:-52vh;
 }
-                                    /*********Customers-Css*********/
+                                        /*********Customers-Css*********/
 #AdminChecked{
     background-color:red;
     padding-bottom:4px;
     padding-right:1vh;
     padding-left:1vh;
     border-radius:25px;
+}
+
+                                    /*********Offline-Customers-Css*********/
+
+#offline_cust_col1{
+    margin-left:-7vh;
+}
+.formOCH{
+    margin-left:-21vh;
+    margin-bottom:5vh;
+}
+#Addcustomerh{
+    margin-right:21.5vh;
+}
+/*********Update-Customers-Css*********/
+#hr {
+    margin-bottom: 5vh;
+}
+.formHH {
+    margin-top: 8vh;
+}
+.cl1{
+    margin-left:-51vh;
+}
+.cl2{
+    margin-left:-49.2vh;
+}
+.cl3 {
+    margin-left: -44.4vh;
+}
+#Customerimg{
+    margin-left:-20vh;
 }

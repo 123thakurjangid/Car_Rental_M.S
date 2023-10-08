@@ -70,3 +70,15 @@ td{
     margin-left:19vh;
     margin-bottom:2vh;
 }
+                                    /*********** update-Car-Css **********/
+.car_Updt_inp{
+    margin-bottom:1vh;
+}
+
+/*********** Delete-Car-Css **********/
+#Car_Delete{
+    margin-right:2vh;
+}
+.Customer_Delete {
+    margin-right: 2vh;
+}

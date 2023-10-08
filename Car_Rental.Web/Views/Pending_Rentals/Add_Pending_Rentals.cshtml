@@ -1,0 +1,32 @@
+﻿@model Car_Rental.Business.Model.User_Home_SelectModel
+
+        <h2 class="formH text-dark">Thanks for Booking Car</h2>
+
+        <form class="CustomerForm" asp-action="SaveRental" asp-controller="Pending_Rentals" method="post">
+
+            <label>Car Id</label><br />
+            <input class="col-sm-9" asp-for="Car_Id" placeholder="Enter Plate Number" /><br />
+
+            <label>Customer Name</label><br />
+            <input class="col-sm-9" asp-for="Customer_Name" placeholder="Enter Plate Number" /><br />
+            <span class="text-danger" asp-validation-for="Customer_Name"></span><br />
+
+            <label>Car Plate Number</label><br />
+            <input class="col-sm-9" asp-for="Plate_Number" placeholder="Enter Plate Number" /><br />
+            <span class="text-danger" asp-validation-for="Plate_Number"></span><br />
+
+            <label>Model</label><br />
+            <input class="col-sm-9" type="text" asp-for="Model" placeholder="Enter Model" /> <br />
+            <span class="text-danger" asp-validation-for="Model"></span><br />
+
+            <label>Price</label><br />
+            <input class="col-sm-9" type="text" asp-for="Price" placeholder="Enter Price" /> <br />
+            <span class="text-danger" asp-validation-for="Price"></span><br />
+
+            <label>Return date</label><br />
+            <input class="col-sm-9" type="datetime-local" asp-for="Return_Date" placeholder="Enter Price" value=""/> <br />
+            <span class="text-danger" asp-validation-for="Return_Date"></span><br />
+
+            <input class="col-sm-9 btn btn-outline-warning" type="submit" value="Save" />
+
+        </form>

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Car_Rental.Business.Model.CarModel>
+
+<h1>Cars List</h1>
+<hr />
+<table class="table table-striped table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Car_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plate_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Company)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            Status🟢
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Car_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Plate_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @{
+                    var status = item.Available;
+                    if (status == "Available" ||status == "available" || status == "Yes" || status == "yes")
+                    {
+                        @Html.DisplayFor(modelItem => item.Available) <t>🟢</t>
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.Available) <t>🔴</t>
+                    }
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Select", "Add_Pending_Rentals", "Pending_Rentals", new { id = item.Car_Id})
+            </td>
+        </tr>
+    }
+</table>

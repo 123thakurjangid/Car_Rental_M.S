@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<Car_Rental.Business.Model.CarModel>
 
-    <h1>Cars List</h1>
+    <h1>Cars In Garage</h1>
+    <hr />
 <table class="table table-dark table-striped table-hover">
     <tr>
         <th>
@@ -22,7 +23,7 @@
             @Html.DisplayNameFor(model => model.Color)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Available)
+            Status🟢
         </th>
         <th></th>
     </tr>
@@ -48,10 +49,21 @@
                 @Html.DisplayFor(modelItem => item.Color)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Available)
+                @{
+                    var status = item.Available.ToUpper();
+                    if (status == "AVAILABLE" || status == "YES")
+                    {
+                        @Html.DisplayFor(modelItem => item.Available) <t>🟢</t>
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.Available) <t>🔴</t>
+                    }
+                }
             </td>
             <td>
-                @Html.ActionLink("Delete", "Delete", new { id = item.Car_Id})
+                <t id="Car_Delete"> @Html.ActionLink("Delete", "Delete", new { id = item.Car_Id})</t>
+                @Html.ActionLink("Update", "UpdateCar", new { id = item.Car_Id})
             </td>
         </tr>
     }

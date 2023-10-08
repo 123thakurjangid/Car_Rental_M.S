@@ -31,13 +31,13 @@
                                     <a style="cursor:pointer" class="nav-link text-dark" data-bs-toggle="offcanvas" data-bs-target="#demo">Menu</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Home</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Customer_Home_Page">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Cars</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Pending Rents</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Pending_Rentals" asp-action="Customer_PendingRentals">Pending Rents</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogOut">LogOut</a>
@@ -62,10 +62,7 @@
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="OfflineCustomers">Offline Customers</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Rentals</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">Returns</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Pending_Rentals" asp-action="Customer_PendingRentals">Rentals</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogOut">LogOut</a>
@@ -98,8 +95,8 @@
                       <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                   </div>
                   <div class="offcanvas-body">
-                      <p>Some text lorem ipsum.</p>
-                      <p>Some text lorem ipsum.</p>
+                      <p>Available Soon...</p>
+                      <p>Available Soon...</p>
                   </div>
               </div>
               @*Menue bar Code Ending*@
@@ -112,8 +109,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
-                <p><a class="nav-link text-dark" asp-controller="Admin" asp-action="Add_New_Car">&#128073; Add New Cars</a></p>
+                <p><a class="nav-link text-dark" asp-controller="Admin" asp-action="Add_New_Car">&#128073; Add New Cars in Garage</a></p>
                 <p><a class="nav-link text-dark" asp-controller="User" asp-action="Add_New_Customer">&#128073; Add New Offline Customer</a></p>
+                <p><a class="nav-link text-dark" asp-controller="Pending_Rentals" asp-action="Renting_For_Offline_Customers">&#128073; Rent A Car for Offline Customer</a></p>
             </div>
         </div>
         }

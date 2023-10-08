@@ -14,7 +14,6 @@ namespace Car_Rental.Data.DbContexts
         {
             
         }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=Car_Rental_Management_System;Trusted_Connection=True;Encrypt=Yes;TrustServerCertificate=Yes");
@@ -24,7 +23,7 @@ namespace Car_Rental.Data.DbContexts
         public DbSet<Login> Login { get; set; }
 
         public DbSet<Car> Car { get; set; }
-
         public DbSet<Customer> Customer { get; set; }
+        public DbSet<Pending_Rental> Pending_Rental { get; set; }
     }
 }
