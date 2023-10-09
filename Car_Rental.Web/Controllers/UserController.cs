@@ -48,7 +48,7 @@ namespace Car_Rental.Web.Controllers
                     HttpContext.Session.SetString("UserID", result.ID.ToString());
                     HttpContext.Session.SetString("LoginBy", Loginby);
 
-                    return RedirectToAction("Customer_Home_Page", "Admin");
+                    return RedirectToAction("Customers_Car_Inventory", "Admin");
                 }
                 else if(Loginby == "Admin" && result.USER_EMAIL == "123Thakurjangid@gmail.com")
                 {
@@ -108,7 +108,7 @@ namespace Car_Rental.Web.Controllers
             return View(user);
 
         }
-        /*Testing start*/
+        /*Update Actions*/
 
         [HttpGet]
         public async Task<IActionResult> UpdateCustomer(int id)
@@ -128,6 +128,11 @@ namespace Car_Rental.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateCustomer(UpdateModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("UpdateCustomer", model);
+            }
+
             var user = await _loginDbContext.Login.FindAsync(model.Id);
 
             if (user != null)
@@ -165,6 +170,11 @@ namespace Car_Rental.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateOfflineCustomer(UpdateOfflineCustomerModel model)
         {
+            if(!ModelState.IsValid)
+            {
+                return View("UpdateOfflineCustomer", model);
+            }
+
             var user = await _loginDbContext.Customer.FindAsync(model.Customer_Id);
 
             if (user != null)
@@ -184,7 +194,7 @@ namespace Car_Rental.Web.Controllers
             return RedirectToAction("OfflineCustomers", "User");
         }
 
-        /*Testing ending*/
+        /* ending*/
 
         public IActionResult Add_New_Customer()
         {
@@ -200,12 +210,10 @@ namespace Car_Rental.Web.Controllers
 
             bool result = _customerService.AddCustomer(customers);
 
-            result = _customerService.AddCustomer(customers);
-
             if (result)
             {
                 TempData["Message"] = "Customer Added Successfully";
-                return Json("true");
+                return RedirectToAction("OfflineCustomers");
             }
             else
             {

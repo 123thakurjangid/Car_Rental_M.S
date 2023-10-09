@@ -21,6 +21,10 @@ namespace Car_Rental.Web.Controllers
         [HttpPost]
         public IActionResult SaveRental(Pending_RentalsModel rmodel)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("Renting_For_Offline_Customers", rmodel);
+            }
             bool result = _pendingRentalsService.AddRentals(rmodel);
             if (result)
             {

@@ -71,13 +71,17 @@ td{
     margin-bottom:2vh;
 }
                                     /*********** update-Car-Css **********/
-.car_Updt_inp{
-    margin-bottom:1vh;
+
+.Cutting_hr_right {
+    margin-right: 21.1vh;
+}
+#UpdateCarhead{
+    margin-top:-7vh;
 }
 
 /*********** Delete-Car-Css **********/
-#Car_Delete{
-    margin-right:2vh;
+#Car_Delete {
+    margin-right: 2vh;
 }
 .Customer_Delete {
     margin-right: 2vh;

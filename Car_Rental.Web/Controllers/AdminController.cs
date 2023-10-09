@@ -23,6 +23,11 @@ namespace Car_Rental.Web.Controllers
             return View();
         }
 
+        public IActionResult Customers_Car_Inventory()
+        {
+            return View();
+        }
+
         public IActionResult Add_New_Car()
         {       
             CarModel model = new CarModel();
@@ -42,7 +47,7 @@ namespace Car_Rental.Web.Controllers
             if (result)
             {
                 TempData["Message"] = "Car Added Successfully";
-                return Json("true");
+                return RedirectToAction("AvailableCars");
             }
             else
             {
@@ -105,6 +110,11 @@ namespace Car_Rental.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateCar(UpdateCarModel carmodel)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("UpdateCar", carmodel);
+            }
+
             var car = await _cardbcontext.Car.FindAsync(carmodel.Car_Id);
 
             if (car != null)

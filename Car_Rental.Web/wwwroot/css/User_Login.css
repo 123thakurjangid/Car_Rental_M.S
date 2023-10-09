@@ -41,7 +41,7 @@ body{
 #Addcustomerh{
     margin-right:21.5vh;
 }
-/*********Update-Customers-Css*********/
+                            /*********Update-Customers-Css*********/
 #hr {
     margin-bottom: 5vh;
 }
@@ -59,4 +59,21 @@ body{
 }
 #Customerimg{
     margin-left:-20vh;
+}
+
+                            /*********Update-Offline-Customers-Css*********/
+.Upofcustcl1 {
+    margin-left: -51.1vh;
+}
+.Upofcustcl2{
+    margin-left: -47.4vh;
+}
+.Upofcustcl3 {
+    margin-left: -45.6vh;
+}
+.Upofcustcl4 {
+    margin-left: -47.4vh;
+}
+.Upofcustcl5 {
+    margin-left: -49.5vh;
 }
