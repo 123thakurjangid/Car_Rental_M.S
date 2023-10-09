@@ -41,19 +41,30 @@ namespace Car_Rental.Web.Controllers
             {
                 return View("Add_New_Car", Car);
             }
-
-            bool result = _carService.AddCar(Car);
-
-            if (result)
-            {
-                TempData["Message"] = "Car Added Successfully";
-                return RedirectToAction("AvailableCars");
-            }
             else
             {
-                TempData["Message"] = "Car  Not Added !";
-                return RedirectToAction("Add_New_Car", "Admin");
+                try
+                {
+                    bool result = _carService.AddCar(Car);
+
+                    if (result)
+                    {
+                        TempData["Message"] = "Car Added Successfully";
+                        return RedirectToAction("AvailableCars");
+                    }
+                    else
+                    {
+                        TempData["Message"] = "Car  Not Added !";
+                        return RedirectToAction("Add_New_Car", "Admin");
+                    }
+                }
+                catch (Exception)
+                {
+                    TempData["Message"] = "Car Plate Number Exist Choose Another plate number !";
+                    return RedirectToAction("Add_New_Car");
+                }
             }
+
         }
         [HttpGet]
         public IActionResult AvailableCars()

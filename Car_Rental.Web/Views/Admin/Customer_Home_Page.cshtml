@@ -50,8 +50,9 @@
             </td>
             <td>
                 @{
-                    var status = item.Available;
-                    if (status == "Available" ||status == "available" || status == "Yes" || status == "yes")
+                    var status = item.Available.ToUpper();
+
+                    if (status == "AVAILABLE" || status == "YES")
                     {
                         @Html.DisplayFor(modelItem => item.Available) <t>🟢</t>
                     }
@@ -62,7 +63,17 @@
                 }
             </td>
             <td>
-                @Html.ActionLink("Select", "Add_Pending_Rentals", "Pending_Rentals", new { id = item.Car_Id})
+                @{
+
+                    if (status == "AVAILABLE" || status == "YES")
+                    {
+                        @Html.ActionLink("Select", "Add_Pending_Rentals", "Pending_Rentals", new { id = item.Car_Id})
+                    }
+                    else
+                    {
+                        <strike class="text-primary">Select</strike>
+                    }
+                }
             </td>
         </tr>
     }

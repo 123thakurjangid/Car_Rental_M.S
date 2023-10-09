@@ -21,20 +21,32 @@ namespace Car_Rental.Web.Controllers
         [HttpPost]
         public IActionResult SaveRental(Pending_RentalsModel rmodel)
         {
+
             if (!ModelState.IsValid)
             {
                 return View("Renting_For_Offline_Customers", rmodel);
             }
-            bool result = _pendingRentalsService.AddRentals(rmodel);
-            if (result)
-            {
-                TempData["Message"] = "Car Rented";
-                return RedirectToAction("Customer_PendingRentals", "Pending_Rentals");
-            }
             else
             {
-                TempData["Message"] = "Car Not Rented !";
-                return RedirectToAction("Customer_Home_Page", "Admin");
+                try 
+                {
+                    bool result = _pendingRentalsService.AddRentals(rmodel);
+                    if (result)
+                    {
+                        TempData["Message"] = "Car Rented";
+                        return RedirectToAction("Customer_PendingRentals", "Pending_Rentals");
+                    }
+                    else
+                    {
+                        TempData["Message"] = "Car Not Rented !";
+                        return RedirectToAction("Customer_Home_Page", "Admin");
+                    }
+                }
+                catch (Exception)
+                {
+                    TempData["Message"] = "Car Was already rented by another user You Can Choose Another Car";
+                    return RedirectToAction("Customer_Home_Page", "Admin");
+                }
             }
 
         }

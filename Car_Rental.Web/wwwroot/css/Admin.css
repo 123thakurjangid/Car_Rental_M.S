@@ -70,8 +70,11 @@ td{
     margin-left:19vh;
     margin-bottom:2vh;
 }
+#AddCarHeading{
+    margin-bottom:5vh;
+    margin-top:-5vh;
+}
                                     /*********** update-Car-Css **********/
-
 .Cutting_hr_right {
     margin-right: 21.1vh;
 }
@@ -79,7 +82,7 @@ td{
     margin-top:-7vh;
 }
 
-/*********** Delete-Car-Css **********/
+                                    /*********** Delete-Car-Css **********/
 #Car_Delete {
     margin-right: 2vh;
 }

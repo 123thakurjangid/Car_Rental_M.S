@@ -8,7 +8,7 @@
     <div class="column">
         <h3>Online Customers</h3>
         <hr />
-        <table id="customertbl" class="table table-dark table-striped table-hover">
+        <table id="customertbl" class="table table-striped table-hover">
             <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.Id)
@@ -42,7 +42,15 @@
                           }
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.User_Password)
+                        @*@Html.DisplayFor(modelItem => item.User_Password)*@
+                        @if (AdminChecker == "Admin" && item.User_Email == "123Thakurjangid@gmail.com")
+                        {
+                            @Html.DisplayFor(modelItem => item.User_Password)
+                        }
+                        else
+                        {
+                            <strike>Password</strike>
+                        }
                     </td>
 
                     @if (AdminChecker == "Admin" && item.User_Email == "123Thakurjangid@gmail.com")
