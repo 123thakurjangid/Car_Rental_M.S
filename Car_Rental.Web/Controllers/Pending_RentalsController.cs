@@ -19,12 +19,12 @@ namespace Car_Rental.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult SaveRental(Pending_RentalsModel rmodel)
+        public IActionResult SaveRental(Pending_RentalsModel rmodel,User_Home_SelectModel uhsm)
         {
 
             if (!ModelState.IsValid)
             {
-                return View("Renting_For_Offline_Customers", rmodel);
+                return View("Add_Pending_Rentals", uhsm);
             }
             else
             {
@@ -46,6 +46,39 @@ namespace Car_Rental.Web.Controllers
                 {
                     TempData["Message"] = "Car Was already rented by another user You Can Choose Another Car";
                     return RedirectToAction("Customer_Home_Page", "Admin");
+                }
+            }
+
+        }
+
+        [HttpPost]
+        public IActionResult SaveRental_ForAdmin(Pending_RentalsModel rmodel)
+        {
+
+            if (!ModelState.IsValid)
+            {
+                return View("Renting_For_Offline_Customers", rmodel);
+            }
+            else
+            {
+                try
+                {
+                    bool result = _pendingRentalsService.AddRentals(rmodel);
+                    if (result)
+                    {
+                        TempData["Message"] = "Car Rented";
+                        return RedirectToAction("Customer_PendingRentals", "Pending_Rentals");
+                    }
+                    else
+                    {
+                        TempData["Message"] = "Car Not Rented !";
+                        return RedirectToAction("Renting_For_Offline_Customers");
+                    }
+                }
+                catch (Exception)
+                {
+                    TempData["Message"] = "Car or Plate Number is Already Exist In Inventory !";
+                    return RedirectToAction("Renting_For_Offline_Customers");
                 }
             }
 

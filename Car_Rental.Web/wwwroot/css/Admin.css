@@ -89,3 +89,9 @@ td{
 .Customer_Delete {
     margin-right: 2vh;
 }
+
+                                    /*********** Delete-Car-Css **********/
+#CarRentalform{
+    margin-top:-7vh;
+    margin-left:16vh;
+}

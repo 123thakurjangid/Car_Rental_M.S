@@ -36,11 +36,19 @@ namespace Car_Rental.Business.Model
     /*for passing data with the help of userhome -> select*/
     public class User_Home_SelectModel
     {
+        [Required(ErrorMessage = "Please Enter id !")]
         public int Car_Id { get; set; }
+        [Required(ErrorMessage = "Please Enter Name !")]
         public string? Customer_Name { get; set; }
+        [Required(ErrorMessage = "Please Enter Rent date !")]
+        public DateTime Rent_Date { get; set; }
+        [Required(ErrorMessage = "Please Enter Return Date !")]
         public DateTime Return_Date { get; set; }
+        [Required(ErrorMessage = "Please Enter Plate number !")]
         public string? Plate_Number { get; set; }
+        [Required(ErrorMessage = "Please Enter model !")]
         public string? Model { get; set; }
+        [Required(ErrorMessage = "Please Enter Price !")]
         public int Price { get; set; }
     }
 }

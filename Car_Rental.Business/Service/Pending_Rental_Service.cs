@@ -29,7 +29,7 @@ namespace Car_Rental.Business.Service
             rental.PLATE_NUMBER = model.Plate_Number;
             rental.MODEL = model.Model;
             rental.PRICE = model.Price;
-            rental.RENT_DATE = DateTime.Now;
+            rental.RENT_DATE = model.Rent_Date;
             rental.RETURN_DATE = model.Return_Date;
 
             result = _pendingRentalsInterface.SaveRentals(rental);

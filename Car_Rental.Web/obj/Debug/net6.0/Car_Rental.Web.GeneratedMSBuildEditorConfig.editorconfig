@@ -9,89 +9,89 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Car_Rental.Web
 build_property.RootNamespace = Car_Rental.Web
-build_property.ProjectDir = C:\Users\thaku\source\repos\Car_Rental_M.S\Car_Rental.Web\
+build_property.ProjectDir = C:\Users\thaku\Source\Repos\Car_Rental_M.S\Car_Rental.Web\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\thaku\source\repos\Car_Rental_M.S\Car_Rental.Web
+build_property.MSBuildProjectDirectory = C:\Users\thaku\Source\Repos\Car_Rental_M.S\Car_Rental.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/Add_New_Car.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/Add_New_Car.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRkX05ld19DYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/Admin_Pannel.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/Admin_Pannel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5fUGFubmVsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/AvailableCars.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/AvailableCars.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXZhaWxhYmxlQ2Fycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/Customers_Car_Inventory.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/Customers_Car_Inventory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3VzdG9tZXJzX0Nhcl9JbnZlbnRvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/Customer_Home_Page.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/Customer_Home_Page.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3VzdG9tZXJfSG9tZV9QYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/UpdateCar.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Admin/UpdateCar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlQ2FyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Pending_Rentals/Add_Pending_Rentals.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Pending_Rentals/Add_Pending_Rentals.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVuZGluZ19SZW50YWxzXEFkZF9QZW5kaW5nX1JlbnRhbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Pending_Rentals/Customer_PendingRentals.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Pending_Rentals/Customer_PendingRentals.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVuZGluZ19SZW50YWxzXEN1c3RvbWVyX1BlbmRpbmdSZW50YWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Pending_Rentals/Renting_For_Offline_Customers.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Pending_Rentals/Renting_For_Offline_Customers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVuZGluZ19SZW50YWxzXFJlbnRpbmdfRm9yX09mZmxpbmVfQ3VzdG9tZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/User/Add_New_Customer.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/User/Add_New_Customer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZGRfTmV3X0N1c3RvbWVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/User/Customers.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/User/Customers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDdXN0b21lcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/User/Login_Form.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/User/Login_Form.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbl9Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/User/OfflineCustomers.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/User/OfflineCustomers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxPZmZsaW5lQ3VzdG9tZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/User/Registration_Page.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/User/Registration_Page.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3RyYXRpb25fUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/User/UpdateCustomer.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/User/UpdateCustomer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVcGRhdGVDdXN0b21lci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/User/UpdateOfflineCustomer.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/User/UpdateOfflineCustomer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVcGRhdGVPZmZsaW5lQ3VzdG9tZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/_ViewImports.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/_ViewStart.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Shared/_Layout.cshtml]
+[C:/Users/thaku/Source/Repos/Car_Rental_M.S/Car_Rental.Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-a1rf4j9dsf

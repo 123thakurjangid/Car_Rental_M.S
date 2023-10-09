@@ -6,7 +6,7 @@
         <h2 id="AddCarHeading" class="formH text-dark">Rental a Car</h2>
         <hr class="Cutting_hr_right" />
 
-            <form class="CustomerForm" asp-action="SaveRental" asp-controller="Pending_Rentals" method="post">
+            <form class="CustomerForm" asp-action="SaveRental_ForAdmin" asp-controller="Pending_Rentals" method="post">
             
                 <label>Car Id</label><br />
                 <input class="col-sm-9" asp-for="Car_Id" placeholder="Enter Plate Number" /><br />
@@ -27,12 +27,16 @@
                 <label>Price</label><br />
                 <input class="col-sm-9" type="text" asp-for="Price" placeholder="Enter Price" /> <br />
                 <span class="text-danger" asp-validation-for="Price"></span><br />
-            
+
+                <label>Rent Date</label><br />
+                <input class="col-sm-9" type="datetime-local" asp-for="Rent_Date" placeholder="Enter Rent date"/> <br />
+                <span class="text-danger" asp-validation-for="Rent_Date"></span><br />
+
                 <label>Return date</label><br />
                 <input class="col-sm-9" type="datetime-local" asp-for="Return_Date" placeholder="Enter Price" value="" /> <br />
                 <span class="text-danger" asp-validation-for="Return_Date"></span><br />
             
-                <input class="col-sm-9 btn btn-outline-warning" type="submit" value="Save" />
+                <input class="col-sm-9 btn btn-outline-warning" type="submit" value="Rent" />
             
             </form>
     </div>

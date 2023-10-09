@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Business\\Car_Rental.Business.csproj": {}
+    "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Business\\Car_Rental.Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Business\\Car_Rental.Business.csproj": {
+    "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Business\\Car_Rental.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Business\\Car_Rental.Business.csproj",
+        "projectUniqueName": "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Business\\Car_Rental.Business.csproj",
         "projectName": "Car_Rental.Business",
-        "projectPath": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Business\\Car_Rental.Business.csproj",
+        "projectPath": "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Business\\Car_Rental.Business.csproj",
         "packagesPath": "C:\\Users\\thaku\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Business\\obj\\",
+        "outputPath": "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thaku\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj": {
-                "projectPath": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj"
+              "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj": {
+                "projectPath": "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj"
               }
             }
           }
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj": {
+    "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj",
+        "projectUniqueName": "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj",
         "projectName": "Car_Rental.Data",
-        "projectPath": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj",
+        "projectPath": "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Data\\Car_Rental.Data.csproj",
         "packagesPath": "C:\\Users\\thaku\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Data\\obj\\",
+        "outputPath": "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thaku\\AppData\\Roaming\\NuGet\\NuGet.Config",
