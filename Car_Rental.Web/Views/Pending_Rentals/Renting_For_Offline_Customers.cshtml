@@ -3,7 +3,7 @@
 @*<h2 class="formH text-dark">Rental a Car</h2>*@
 <div class="row">
     <div class="column">
-        <h2 id="AddCarHeading" class="formH text-dark">Rental a Car</h2>
+        <h2 id="UpdateCarhead" class="formH text-dark">Rent a Car</h2>
         <hr class="Cutting_hr_right" />
 
             <form class="CustomerForm" asp-action="SaveRental_ForAdmin" asp-controller="Pending_Rentals" method="post">
@@ -29,11 +29,11 @@
                 <span class="text-danger" asp-validation-for="Price"></span><br />
 
                 <label>Rent Date</label><br />
-                <input class="col-sm-9" type="datetime-local" asp-for="Rent_Date" placeholder="Enter Rent date"/> <br />
+                <input class="col-sm-9" type="datetime" asp-for="Rent_Date" placeholder="Enter Rent date" value="@DateTime.Now"/> <br />
                 <span class="text-danger" asp-validation-for="Rent_Date"></span><br />
 
                 <label>Return date</label><br />
-                <input class="col-sm-9" type="datetime-local" asp-for="Return_Date" placeholder="Enter Price" value="" /> <br />
+                <input class="col-sm-9" type="datetime-local" asp-for="Return_Date" placeholder="Enter Price"/> <br />
                 <span class="text-danger" asp-validation-for="Return_Date"></span><br />
             
                 <input class="col-sm-9 btn btn-outline-warning" type="submit" value="Rent" />
