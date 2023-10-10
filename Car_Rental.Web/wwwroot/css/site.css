@@ -23,3 +23,239 @@ body {
 .nav-item1{
     box-shadow:-2px 2px 2px white;
 }
+
+/* footer section start */
+
+.footer_section {
+    width: 100%;
+    float: left;
+    background-color: black;
+    height: auto;
+    padding: 90px 0px;
+    margin-top: 3vh;
+}
+
+.footer_location_text {
+    width: 100%;
+    margin-top:-15vh;
+    margin-bottom:-12vh;
+    padding-left:15vh;
+}
+
+    .footer_location_text ul {
+        margin: 0px;
+        padding: 0px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .footer_location_text li {
+        float: left;
+        font-size: 16px;
+        color: #ffffff;
+        padding: 40px 80px;
+    }
+
+        .footer_location_text li a {
+            color: #ffffff;
+        }
+
+            .footer_location_text li a:hover {
+                color: #7c2c0c;
+            }
+
+.padding_left_10 {
+    padding-left: 15px;
+}
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+#social {
+    margin: 20px 0px;
+}
+
+.smGlobalBtn {
+    /* global button class */
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 27px;
+    -moz-border-radius: 27px;
+    -webkit-border-radius: 27px;
+}
+
+
+/* facebook button class*/
+
+.facebookBtn {
+    background: #171717;
+}
+
+    .facebookBtn:before {
+        /* use :before to add the relevant icons */
+        font-family: "FontAwesome";
+        content: "\f09a";
+        /* add facebook icon */
+    }
+
+    .facebookBtn:hover {
+        color: #fff;
+        background: #7c2c0c;
+    }
+
+a.facebookBtn.smGlobalBtn.active {
+    background: #7c2c0c;
+}
+
+
+/* twitter button class*/
+
+.twitterBtn {
+    background: #171717;
+}
+
+    .twitterBtn:before {
+        font-family: "FontAwesome";
+        content: "\f099";
+        /* add twitter icon */
+    }
+
+    .twitterBtn:hover {
+        color: #fff;
+        background: #7c2c0c;
+    }
+
+
+/* google plus button class*/
+
+.googleplusBtn {
+    background: #171717;
+}
+
+    .googleplusBtn:before {
+        font-family: "FontAwesome";
+        content: "\f0d5";
+        /* add googleplus icon */
+    }
+
+    .googleplusBtn:hover {
+        color: #fff;
+        background: #7c2c0c;
+    }
+
+
+/* linkedin button class*/
+
+.linkedinBtn {
+    background: #171717;
+}
+
+    .linkedinBtn:before {
+        font-family: "FontAwesome";
+        content: "\f0e1";
+        /* add linkedin icon */
+    }
+
+    .linkedinBtn:hover {
+        color: #fff;
+        background: #7c2c0c;
+    }
+
+.useful_text {
+    width: 100%;
+    font-size: 24px;
+    color: #fcfcfc;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#repair{
+    margin-left:-8vh;
+}
+
+.lorem_text {
+    width: 56%;
+    float: left;
+    font-size: 16px;
+    color: #878585;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.footer_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #878585;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.footer_menu {
+    width: 100%;
+    float: left;
+}
+
+    .footer_menu ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .footer_menu li {
+        padding-top: 5px;
+        font-size: 16px;
+        color: #878585;
+    }
+
+        .footer_menu li a {
+            color: #878585;
+        }
+
+            .footer_menu li a:hover {
+                color: #7c2c0c;
+            }
+
+
+/* footer section end */
+
+
+/* copright section start */
+
+.copyright_section {
+    width: 100%;
+    float: left;
+    background-color: #ffffff;
+    height: auto;
+}
+
+.copyright_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #0b0b0c;
+    text-align: center;
+    margin-left: 0px;
+    font-weight: 500;
+    padding: 2vh;
+    margin-bottom:-2vh; 
+}
+
+    .copyright_text a {
+        color: #0b0b0c;
+    }
+
+        .copyright_text a:hover {
+            color: #7c2c0c;
+        }
+
+
+/* copyright section end */

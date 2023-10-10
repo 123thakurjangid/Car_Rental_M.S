@@ -115,11 +115,60 @@
             </div>
         </div>
         }
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Car_Rental.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+
+        @* Footer Section Starting*@
+        @if (!string.IsNullOrEmpty(HttpContextAccessor.HttpContext.Session.GetString("UserEmail")))
+        {
+            <div class="footer_section">
+                <div class="container">
+                    <div class="footer_location_text">
+                        <ul style="list-style-type:none">
+                            <li><span class="padding_left_10"><a href="#">Loram Ipusm hosting web</a></span></li>
+                            <li><span class="padding_left_10">📧 <a href="#">demo@gmail.com</a></span></li>
+                            <li><span class="padding_left_10">☏ <a href="#">Call : +91_XXXXXXXXXX</a></span></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <h2 class="useful_text">Useful link </h2>
+                            <div class="footer_menu">
+                                <ul>
+                                    <li><a href="@Url.Action("HomePage","Book")">Home</a></li>
+                                    <li><a href="@Url.Action("About","Home")">About</a></li>
+                                    <li><a href="@Url.Action("Enquiry","Home")">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <h2 id="repair" class="useful_text">Repair</h2>
+                            <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur  adipiscinaliqua  Loreadipiscing </p>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <h2 class="useful_text">Social Media</h2>
+                            <div id="social">
+                                <a class="facebookBtn smGlobalBtn active" href="#"></a>
+                                <a class="twitterBtn smGlobalBtn" href="#"></a>
+                                <a class="googleplusBtn smGlobalBtn" href="#"></a>
+                                <a class="linkedinBtn smGlobalBtn" href="#"></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-3">
+                            <h1 class="useful_text">Our Rentals center</h1>
+                            <p class="footer_text">Lorem ipsum dolor sit amet, consectetur adipiscinaliquaLoreadipiscing </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer section end -->
+            <!-- copyright section start -->
+            <div class="copyright_section">
+                <div class="container">
+                    <p class="copyright_text">2020 All Rights Reserved. Design by Thakur Jangid.</p>
+                </div>
+            </div>
+            <!-- copyright section end -->
+        }
+    </>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
