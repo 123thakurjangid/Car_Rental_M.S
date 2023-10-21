@@ -31,6 +31,7 @@ namespace Car_Rental.Business.Service
             rental.PRICE = model.Price;
             rental.RENT_DATE = model.Rent_Date;
             rental.RETURN_DATE = model.Return_Date;
+            rental.CUSTOMER_EMAIL_ID = model.Customer_Email_Id;
 
             result = _pendingRentalsInterface.SaveRentals(rental);
             return result;
@@ -52,6 +53,7 @@ namespace Car_Rental.Business.Service
                 Price   = x.PRICE,
                 Rent_Date = x.RENT_DATE,
                 Return_Date = x.RETURN_DATE,
+                Customer_Email_Id = x.CUSTOMER_EMAIL_ID,
 
             }).ToList();
         }

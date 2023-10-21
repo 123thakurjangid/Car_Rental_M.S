@@ -26,5 +26,7 @@ namespace Car_Rental.Business.Model
         public DateTime Rent_Date { get; set; }
         [Required(ErrorMessage = "Please enter Return Date !")]
         public DateTime Return_Date { get; set; }
+        [Required(ErrorMessage = "Please Enter Customer Id !")]
+        public string Customer_Email_Id { get; set; }
     }
 }

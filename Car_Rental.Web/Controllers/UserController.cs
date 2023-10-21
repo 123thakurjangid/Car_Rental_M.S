@@ -6,6 +6,8 @@ using Car_Rental.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
+using System.Net.Mail;
+using System.Net;
 
 namespace Car_Rental.Web.Controllers
 {
@@ -41,7 +43,6 @@ namespace Car_Rental.Web.Controllers
             var result = loginService.login(model);
             if (result != null && result.ID > 0)
             {
-
                 if (Loginby == "Customer")
                 {
                     HttpContext.Session.SetString("UserEmail", result.USER_EMAIL.ToString());
@@ -246,6 +247,41 @@ namespace Car_Rental.Web.Controllers
                 TempData["Message"] = "Record not deleted !";
             }
             return RedirectToAction("OfflineCustomers", "User");
+        }
+        public IActionResult MailSendform()
+        {
+            return View();  
+        }
+        public IActionResult ContectUs(String ReciverMail)
+        {
+            try
+            {
+                string fromMail = "123thakurjangid@gmail.com";
+                string fromPassword = "fdxbcnpxstughuml";
+
+                MailMessage message = new MailMessage();
+                message.From = new MailAddress(fromMail);
+                message.Subject = "Test Console Web";
+                message.To.Add(new MailAddress(ReciverMail));
+                message.Body = "<html><body> We got your request we will contect you soon ! </body></html>";
+                message.IsBodyHtml = true;
+
+                var smtpclient = new SmtpClient("smtp.gmail.com")
+                {
+                    Port = 587,
+                    Credentials = new NetworkCredential(fromMail, fromPassword),
+                    EnableSsl = true,
+                };
+
+                smtpclient.Send(message);
+                TempData["Message"] = "Mail send Successfully";
+                return RedirectToAction("Customer_Home_Page", "Admin");
+            }
+            catch (Exception ex)
+            {
+                TempData["Message"] = "Mail fail to send! Check Your Internet Connection !";
+                return RedirectToAction("ContectUs", "User");
+            }
         }
     }
 }

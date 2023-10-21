@@ -7,6 +7,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Car_Rental.Business.Model
 {
@@ -50,5 +51,7 @@ namespace Car_Rental.Business.Model
         public string? Model { get; set; }
         [Required(ErrorMessage = "Please Enter Price !")]
         public int Price { get; set; }
+        [Required(ErrorMessage = "Please Enter Customer Email Id !")]
+        public string Customer_Email_id { get; set; }
     }
 }

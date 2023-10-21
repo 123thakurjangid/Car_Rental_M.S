@@ -19,5 +19,6 @@ namespace Car_Rental.Data.Entities
         public int PRICE{ get; set; }
         public DateTime RENT_DATE{ get; set; }
         public DateTime RETURN_DATE{ get; set; }
+        public string CUSTOMER_EMAIL_ID { get; set; }
     }
 }
