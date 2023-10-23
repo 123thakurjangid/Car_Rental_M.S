@@ -277,10 +277,10 @@ namespace Car_Rental.Web.Controllers
                 TempData["Message"] = "Mail send Successfully";
                 return RedirectToAction("Customer_Home_Page", "Admin");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                TempData["Message"] = "Mail fail to send! Check Your Internet Connection !";
-                return RedirectToAction("ContectUs", "User");
+                TempData["Message"] = "Mail fail to send! Check Your Internet Connection ! Or field Value should be null";
+                return RedirectToAction("MailSendform", "User");
             }
         }
     }

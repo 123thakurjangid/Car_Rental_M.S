@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\AdminPanelCars\\Scorpio.png"
     },
     {
+      "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\AdminPanelCars\\User.png",
+      "PackagePath": "staticwebassets\\AdminPanelCars\\User.png"
+    },
+    {
       "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Car_Images\\Customers.png",
       "PackagePath": "staticwebassets\\Car_Images\\Customers.png"
     },
@@ -47,6 +51,10 @@
     {
       "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Car_Images\\SuperCar.png",
       "PackagePath": "staticwebassets\\Car_Images\\SuperCar.png"
+    },
+    {
+      "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\UsersImages\\thakur.jfif",
+      "PackagePath": "staticwebassets\\UsersImages\\thakur.jfif"
     },
     {
       "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\css\\Admin.css",

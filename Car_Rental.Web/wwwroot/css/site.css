@@ -1,5 +1,21 @@
+/* UserId Show section start */
+.userImg{
+    width: 4vh;
+    margin: 0%;
+    padding: 0%;
+    margin-top:5px;
+    margin-left:125vh;
+}
+.AdminImg {
+    width: 4vh;
+    margin: 0%;
+    padding: 0%;
+    margin-top: 5px;
+    margin-left: 98vh;
+}
+/* UserId Show section end */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -24,7 +40,7 @@ body {
     box-shadow:-2px 2px 2px white;
 }
 
-/* footer section start */
+                                /* footer section start */
 
 .footer_section {
     width: 100%;
@@ -75,7 +91,7 @@ body {
 }
 
 .smGlobalBtn {
-    /* global button class */
+                                     /* global button class */
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -94,7 +110,7 @@ body {
 }
 
 
-/* facebook button class*/
+                            /* facebook button class*/
 
 .facebookBtn {
     background: #171717;

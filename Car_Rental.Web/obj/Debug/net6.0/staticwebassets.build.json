@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RIXOxfSTtlL/K7kp9PF9a6MzWXoKoGYI4KhA8Jpvtzk=",
+  "Hash": "F4sTnlh7j5RIgQYxmfPVxlhbJY1E8V09XziZoYKGqQk=",
   "Source": "Car_Rental.Web",
   "BasePath": "_content/Car_Rental.Web",
   "Mode": "Default",
@@ -185,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\AdminPanelCars\\Scorpio.png"
+    },
+    {
+      "Identity": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\AdminPanelCars\\User.png",
+      "SourceId": "Car_Rental.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\",
+      "BasePath": "_content/Car_Rental.Web",
+      "RelativePath": "AdminPanelCars/User.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\AdminPanelCars\\User.png"
     },
     {
       "Identity": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Car_Images\\Customers.png",
@@ -1290,6 +1307,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\UsersImages\\thakur.jfif",
+      "SourceId": "Car_Rental.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\",
+      "BasePath": "_content/Car_Rental.Web",
+      "RelativePath": "UsersImages/thakur.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\UsersImages\\thakur.jfif"
     }
   ]
 }
