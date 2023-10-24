@@ -1,15 +1,23 @@
 ﻿@model Car_Rental.Business.Model.UpdateModel
+@inject IHttpContextAccessor HttpContextAccessor
 
 <div class="row">
     <div class="column">
 
-        <img id="rightcolimg" src="~/AdminPanelCars/Mustang Gt.png" />
+        <img id="rightcolimg" src="~/Car_Images/Customers.png" />
 
     </div>
     <div class="column">
 
-        <h2 class="formHH text-dark">Updating Customers Profile</h2>
+        <h2 class=" text-dark">Update Your Profile</h2>
         <hr id="hr" />
+
+        <div class="profile-pic">
+            @{
+                var Imageurl = HttpContextAccessor.HttpContext.Session.GetString("UserImg");
+            }
+            <img class="ProfilePic" src="@Imageurl" />
+        </div>
 
         <form class="CustUpdateForm" method="post" asp-action="UserProfileUpdate" asp-controller="User" enctype="multipart/form-data">
 

@@ -81,3 +81,21 @@ body{
 m {
     margin-left: -20vh;
 }
+
+                            /*User Profile Pic*/
+.profile-pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom:14vh;
+    margin-left:-15vh;
+    margin-top:-12vh;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}

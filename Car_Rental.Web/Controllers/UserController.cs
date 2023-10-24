@@ -10,6 +10,7 @@ using System.Net.Mail;
 using System.Net;
 using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
 using NuGet.Protocol.Plugins;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Car_Rental.Web.Controllers
 {
