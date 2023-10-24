@@ -34,7 +34,7 @@ namespace Car_Rental.Web.Controllers
                     if (result)
                     {
                         TempData["Message"] = "Car Rented";
-                        return RedirectToAction("Customer_PendingRentals", "Pending_Rentals");
+                        return RedirectToAction("Customer_PendingRentals", "User");
                     }
                     else
                     {
@@ -84,15 +84,6 @@ namespace Car_Rental.Web.Controllers
 
         }
 
-        [HttpGet]
-        public IActionResult Customer_PendingRentals()
-        {
-            List<Pending_RentalsModel> Rentals = new List<Pending_RentalsModel>();
-            Rentals = _pendingRentalsService.GetRentals();
-            return View(Rentals);
-
-        }
-
         public IActionResult Delete(int Id)
         {
             if (Id == 0)
@@ -108,7 +99,7 @@ namespace Car_Rental.Web.Controllers
             {
                 TempData["Message"] = "Rental not Remove !";
             }
-            return RedirectToAction("Customer_PendingRentals", "Pending_Rentals");
+            return RedirectToAction("Customer_PendingRentals", "User");
         }
 
         [HttpGet]

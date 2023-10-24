@@ -16,12 +16,14 @@ namespace Car_Rental.Web.Controllers
 {
     public class UserController : Controller
     {
+        private readonly IPendingRentals_Service _pendingRentalsService;
         private readonly ILoginService loginService;
         private readonly ICustomerService _customerService;
         private readonly LoginDbContext _loginDbContext;
         private IHostingEnvironment hostingEnv;
         public UserController(IHostingEnvironment env) 
         {
+            _pendingRentalsService = new Pending_Rental_Service();
             loginService = new LoginService();
             _customerService = new CustomerService();
             _loginDbContext = new LoginDbContext();
@@ -329,12 +331,12 @@ namespace Car_Rental.Web.Controllers
                 };
 
                 smtpclient.Send(message);
-                TempData["Message"] = "Mail send Successfully";
+                TempData["Message"] = "We got Your request successfully, We will contect you soon !";
                 return RedirectToAction("Customer_Home_Page", "Admin");
             }
             catch (Exception)
             {
-                TempData["Message"] = "Mail fail to send! Check Your Internet Connection ! Or field Value should be null";
+                TempData["Message"] = "Request fail to send! Check Your Internet Connection ! Or field Value should be null";
                 return RedirectToAction("MailSendform", "User");
             }
         }
@@ -392,6 +394,15 @@ namespace Car_Rental.Web.Controllers
 
             TempData["Message"] = "Details Not Update";
             return RedirectToAction("UserProfileUpdate", "User");
+        }
+
+        [HttpGet]
+        public IActionResult Customer_PendingRentals()
+        {
+            List<Pending_RentalsModel> Rentals = new List<Pending_RentalsModel>();
+            Rentals = _pendingRentalsService.GetRentals();
+            return View(Rentals);
+
         }
     }
 }
