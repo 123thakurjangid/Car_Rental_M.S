@@ -48,11 +48,17 @@
                                         var Userimgs = @HttpContextAccessor.HttpContext.Session.GetString("UserImg");
                                         if(Userimgs != null)
                                         {
-                                            <img class="userImg rounded-circle" src="@Userimgs">
+                                            /* <img class="userImg rounded-circle" src="@Userimgs"> */
+                                            <div class="profile-pich">
+                                                <img class="ProfilePich" src="@Userimgs" />
+                                            </div>
+
                                         }
                                         else
                                         {
-                                            <img class="userImg rounded-circle" src="~/AdminPanelCars/User.png">
+                                            <div class="profile-pich">
+                                                <img class="ProfilePich" src="@Userimgs" />
+                                            </div>
                                         }
 
                                     } 
@@ -105,11 +111,15 @@
                                         var Userimgs = @HttpContextAccessor.HttpContext.Session.GetString("UserImg");
                                         if (Userimgs != null)
                                         {
-                                            <img class="AdminImg rounded-circle" src="@Userimgs">
+                                            <div class="Aprofile-pich">
+                                                <img class="AProfilePich" src="@Userimgs" />
+                                            </div>
                                         }
                                         else
                                         {
-                                            <img class="AdminImg rounded-circle" src="~/AdminPanelCars/User.png">
+                                            <div class="Aprofile-pich">
+                                                <img class="AProfilePich" src="@Userimgs" />
+                                            </div>
                                         }
 
                                     }

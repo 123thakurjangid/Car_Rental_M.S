@@ -1,23 +1,47 @@
-/* UserId Show section start */
-.userImg{
-    width: 4vh;
-    margin: 0%;
-    padding: 0%;
-    margin-top:5px;
-    margin-left:120vh;
-    margin-right:1vh;
+/* User Update form section start */
+.profile-pich {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-bottom:10vh;
+    margin-top:-10vh;
+    margin-right:51vh;
+    margin-left:66vh;
 }
-.AdminImg {
-    width: 4vh;
-    margin: 0%;
-    padding: 0%;
-    margin-top: 5px;
-    margin-left: 95vh;
+
+.profile-pich img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
 }
+/* User update form section end */
+
+/* Admin Update form section start */
+.Aprofile-pich {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-bottom: 10vh;
+    margin-top: -10vh;
+    margin-right: 50vh;
+    margin-left: 40vh;
+}
+
+.Aprofile-pich img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+/* Admin update form section end */
+
 .UserName {
     margin-top: -1vh;
 }
-/* UserId Show section end */
+/* Admin update form section end */
 html {
     font-size: 14px;
 }
