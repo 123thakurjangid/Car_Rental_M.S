@@ -53,6 +53,10 @@
       "PackagePath": "staticwebassets\\Car_Images\\SuperCar.png"
     },
     {
+      "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Image\\Thakur_Jangid.jfif",
+      "PackagePath": "staticwebassets\\Image\\Thakur_Jangid.jfif"
+    },
+    {
       "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\UsersImages\\thakur.jfif",
       "PackagePath": "staticwebassets\\UsersImages\\thakur.jfif"
     },

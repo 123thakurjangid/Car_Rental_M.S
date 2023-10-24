@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
 using System.Net.Mail;
 using System.Net;
+using IHostingEnvironment = Microsoft.AspNetCore.Hosting.IHostingEnvironment;
+using NuGet.Protocol.Plugins;
 
 namespace Car_Rental.Web.Controllers
 {
@@ -16,11 +18,13 @@ namespace Car_Rental.Web.Controllers
         private readonly ILoginService loginService;
         private readonly ICustomerService _customerService;
         private readonly LoginDbContext _loginDbContext;
-        public UserController() 
+        private IHostingEnvironment hostingEnv;
+        public UserController(IHostingEnvironment env) 
         {
             loginService = new LoginService();
             _customerService = new CustomerService();
             _loginDbContext = new LoginDbContext();
+            this.hostingEnv = env;
         }
         public IActionResult Registration_Page()
         {
@@ -48,6 +52,7 @@ namespace Car_Rental.Web.Controllers
                     HttpContext.Session.SetString("UserEmail", result.USER_EMAIL.ToString());
                     HttpContext.Session.SetString("UserID", result.ID.ToString());
                     HttpContext.Session.SetString("LoginBy", Loginby);
+                    HttpContext.Session.SetString("UserImg", result.ATTACHMENTURL.ToString());
 
                     return RedirectToAction("Customers_Car_Inventory", "Admin");
                 }
@@ -56,6 +61,7 @@ namespace Car_Rental.Web.Controllers
                     HttpContext.Session.SetString("UserEmail", result.USER_EMAIL.ToString());
                     HttpContext.Session.SetInt32("UserID", result.ID);
                     HttpContext.Session.SetString("LoginBy", Loginby);
+                    HttpContext.Session.SetString("UserImg", result.ATTACHMENTURL.ToString());
 
                     return RedirectToAction("Admin_Pannel","Admin");
                 }
@@ -74,12 +80,43 @@ namespace Car_Rental.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult SaveUser(LoginModel login)
+        public async Task<IActionResult> SaveUser(LoginModel login)
         {
             if (!ModelState.IsValid)
             {
                 return View("Registration_Page", login);
             }
+
+            if(login.Attachmentfile == null)
+            {
+                login.AttachmentUrl = "/AdminPanelCars/User.png";
+            }
+
+            /*start*/
+            if (login != null && login.Attachmentfile != null)  // it is for save image url in database
+            {
+                var filePath = "/image/";
+
+                login.AttachmentUrl = filePath + login.Attachmentfile.FileName;
+
+            }
+
+            if (login != null && login.Attachmentfile != null)  // IT IS FOR SAVE IMAGE INTO  PROJECT FOLDER  ~/WWW.ROOT/IMAGE;
+            {
+                var FileDic = "Image";
+                string FilePath = Path.Combine(hostingEnv.WebRootPath, FileDic);
+                if (!Directory.Exists(FilePath))
+                    Directory.CreateDirectory(FilePath);
+                var fileName = login.Attachmentfile.FileName;
+                var filePath = Path.Combine(FilePath, fileName);
+
+                using (FileStream fs = System.IO.File.Create(filePath))
+                {
+                    login.Attachmentfile.CopyTo(fs);
+                }
+            }
+
+            /*end*/
 
             bool result = loginService.AddUser(login);
 
@@ -230,7 +267,7 @@ namespace Car_Rental.Web.Controllers
             custm = _customerService.GetCustomer();
             return View(custm);
         }
-
+        [HttpGet]
         public IActionResult Delete(int Id)
         {
             if (Id == 0)
@@ -247,6 +284,23 @@ namespace Car_Rental.Web.Controllers
                 TempData["Message"] = "Record not deleted !";
             }
             return RedirectToAction("OfflineCustomers", "User");
+        }
+        public IActionResult DeleteOnlineCustomer(int Id)
+        {
+            if (Id == 0)
+            {
+                TempData["Message"] = "Record not found to delte !";
+            }
+            if (loginService.DeleteOnlineCustomer(Id))
+            {
+                TempData["Message"] = "Record Deleted Successfully";
+
+            }
+            else
+            {
+                TempData["Message"] = "Record not deleted !";
+            }
+            return RedirectToAction("Customers", "User");
         }
         public IActionResult MailSendform()
         {
@@ -282,6 +336,61 @@ namespace Car_Rental.Web.Controllers
                 TempData["Message"] = "Mail fail to send! Check Your Internet Connection ! Or field Value should be null";
                 return RedirectToAction("MailSendform", "User");
             }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> UserProfileUpdate(int id)
+        {
+            var customer = await _loginDbContext.Login.FirstOrDefaultAsync(x => x.ID == id);
+
+            var viewmodel = new UpdateModel()
+            {
+                Id = customer.ID,
+                User_Email = customer.USER_EMAIL,
+                User_Password = customer.USER_PASSWORD,
+            };
+
+            return View(viewmodel);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UserProfileUpdate(UpdateModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("UpdateCustomer", model);
+            }
+
+            var user = await _loginDbContext.Login.FindAsync(model.Id);
+
+            if (user != null)
+            {
+                if(model.Attachmentfile != null)
+                {
+                    var FileDic = "Image";
+                    string FilePath = Path.Combine(hostingEnv.WebRootPath, FileDic);
+                    if (!Directory.Exists(FilePath))
+                        Directory.CreateDirectory(FilePath);
+                    var fileName = model.Attachmentfile.FileName;
+                    var filePath = Path.Combine(FilePath, fileName);
+
+                    using (FileStream fs = System.IO.File.Create(filePath))
+                    {
+                        model.Attachmentfile.CopyTo(fs);
+                    }
+                }
+
+                user.USER_EMAIL = model.User_Email;
+                user.USER_PASSWORD = model.User_Password;
+                var filepath = "/image/";
+                user.ATTACHMENTURL = filepath + model.Attachmentfile.FileName;
+
+                await _loginDbContext.SaveChangesAsync();
+                TempData["Message"] = "Details Updated Successfully , its shows when you Login Next Time";
+                return RedirectToAction("Customers_Car_Inventory", "Admin");
+            }
+
+            TempData["Message"] = "Details Not Update";
+            return RedirectToAction("UserProfileUpdate", "User");
         }
     }
 }

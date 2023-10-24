@@ -2,7 +2,8 @@
 
 <img src="~/Car_Images/Lambo.png" />
 
-<form asp-action="SaveUser" asp-controller="User" method="post">
+<form asp-action="SaveUser" asp-controller="User" method="post" enctype="multipart/form-data">
+    @*<input class="col-sm-5" type="file" asp-for="Attachmentfile" accept=".png,.jpg,.jpeg,.gif,.jfif" /><br />*@
     <label id="lbl1">Email address</label><br />
     <input class="col-sm-5" type="email" asp-for="User_Email" placeholder="Enter Email" /><br />
     <span class="text-danger" asp-validation-for="User_Email"></span><br />

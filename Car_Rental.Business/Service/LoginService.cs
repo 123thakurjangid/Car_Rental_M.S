@@ -29,10 +29,16 @@ namespace Car_Rental.Business.Service
             login.ID = loginModel.Id;
             login.USER_EMAIL = loginModel.User_Email;
             login.USER_PASSWORD = loginModel.User_Password;
+            login.ATTACHMENTURL = loginModel.AttachmentUrl;
 
             result = _loginInterface.SaveUser(login);
 
             return result;
+        }
+
+        public bool DeleteOnlineCustomer(int id)
+        {
+            return _loginInterface.DeleteOnlineCustomer(id);
         }
 
         public List<LoginModel> GetUsers()
@@ -41,7 +47,8 @@ namespace Car_Rental.Business.Service
             {
                 Id = x.ID,
                 User_Email = x.USER_EMAIL,
-                User_Password = x.USER_PASSWORD
+                User_Password = x.USER_PASSWORD,
+                AttachmentUrl = x.ATTACHMENTURL
             }).ToList();
         }
 

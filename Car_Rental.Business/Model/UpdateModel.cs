@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +19,7 @@ namespace Car_Rental.Business.Model
         public string? User_Email { get; set; }
         [Required(ErrorMessage = "Please enter User Password !")]
         public string? User_Password { get; set; }
+        public IFormFile? Attachmentfile { get; set; }
     }
 
     public class UpdateOfflineCustomerModel

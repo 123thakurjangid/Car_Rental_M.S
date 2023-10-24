@@ -44,21 +44,36 @@
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogOut">LogOut</a>
                                 </li>
                                 <li class="nav-item">
-                                    <img class="userImg rounded-circle" src="~/AdminPanelCars/User.png">
+                                    @{
+                                        var Userimgs = @HttpContextAccessor.HttpContext.Session.GetString("UserImg");
+                                        if(Userimgs != null)
+                                        {
+                                            <img class="userImg rounded-circle" src="@Userimgs">
+                                        }
+                                        else
+                                        {
+                                            <img class="userImg rounded-circle" src="~/AdminPanelCars/User.png">
+                                        }
+
+                                    } 
                                 </li>
-                                <li id="leftho" class="nav-item">
-                                    <a id="user" class="nav-link text-dark text-uppercase">
+                                <li class="nav-item UserName">
+
+                                    <a class="nav-link text-dark text-uppercase">
                                         @{
-                                            var username = HttpContextAccessor.HttpContext.Session.GetString("UserEmail");
+                                            var user_id = HttpContextAccessor.HttpContext.Session.GetString("UserID");
+                                            var username = HttpContextAccessor.HttpContext.Session.GetString("UserEmail").ToUpper();
+                                            var final_User_Name = "";
                                             foreach (var it in username)
                                             {
                                                 if (it == '@')
                                                 {
                                                     break;
                                                 }
-                                                @it
+                                                final_User_Name += @it;
                                             }
                                         }
+                                        <t> @Html.ActionLink(final_User_Name, "UserProfileUpdate", "User", new { id = user_id}) </t>
                                     </a>
                                 </li>
                             }
@@ -86,24 +101,38 @@
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogOut">LogOut</a>
                                 </li>
                                 <li class="nav-item">
-                                    @*<img class="AdminImg" src="~/AdminPanelCars/User.png">*@
-                                    <img class="AdminImg rounded-circle" src="~/UsersImages/thakur.jfif">
+                                    @{
+                                        var Userimgs = @HttpContextAccessor.HttpContext.Session.GetString("UserImg");
+                                        if (Userimgs != null)
+                                        {
+                                            <img class="AdminImg rounded-circle" src="@Userimgs">
+                                        }
+                                        else
+                                        {
+                                            <img class="AdminImg rounded-circle" src="~/AdminPanelCars/User.png">
+                                        }
+
+                                    }
                                 </li>
-                                <li id="leftho" class="nav-item">
+                                <li class="nav-item">
+                                    
                                     <a id="user" class="nav-link text-dark text-uppercase">
                                         @{
-                                            var username = HttpContextAccessor.HttpContext.Session.GetString("UserEmail");
+                                  
+                                            var username = HttpContextAccessor.HttpContext.Session.GetString("UserEmail").ToUpper();
+
                                             foreach (var it in username)
                                             {
                                                 if (it == '@')
                                                 {
                                                     break;
                                                 }
-                                                @it
+                                                @it;
                                             }
                                         }
                                     </a>
                                 </li>
+
                             }
 
                         }
@@ -196,6 +225,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- footer section end -->
             <!-- copyright section start -->
             <div class="copyright_section">

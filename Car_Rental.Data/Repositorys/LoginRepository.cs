@@ -17,6 +17,20 @@ namespace Car_Rental.Data.Repositorys
             _context = new LoginDbContext();
         }
 
+        public bool DeleteOnlineCustomer(int id)
+        {
+            var Customer = _context.Login.Find(id);
+            if (Customer != null)
+            {
+                _context.Login.Remove(Customer);
+                return _context.SaveChanges() > 0 ? true : false;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public List<Login> GetCustomer()
         {
             return _context.Login.ToList();
