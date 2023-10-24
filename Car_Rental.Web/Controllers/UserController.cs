@@ -404,5 +404,10 @@ namespace Car_Rental.Web.Controllers
             return View(Rentals);
 
         }
+
+        public IActionResult Footer_About()
+        {
+            return View();
+        }
     }
 }
