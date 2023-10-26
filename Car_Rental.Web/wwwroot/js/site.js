@@ -1,4 +1,6 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
+﻿function myFunction() {
+    alert("First Pay the full Amount with Penalty and then talk to the Admin for Remove this Rental.");
+}
+function myFunction1() {
+    alert("This rental is Booked by another user, You can't remove another user Rentals, You can Remove only your Rentals.");
+}

@@ -13,6 +13,7 @@
           "Microsoft.EntityFrameworkCore.Design": "7.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.11",
+          "Microsoft.TypeScript.MSBuild": "5.2.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16"
         },
         "runtime": {
@@ -1463,6 +1464,7 @@
           }
         }
       },
+      "Microsoft.TypeScript.MSBuild/5.2.2": {},
       "Microsoft.VisualStudio.Debugger.Contracts/17.2.0": {
         "dependencies": {
           "MessagePack": "2.1.152",
@@ -3399,6 +3401,13 @@
       "sha512": "sha512-N4KeF3cpcm1PUHym1RmakkzfkEv3GRMyofVv40uXsQhCQeglr2OHNcUk2WOG51AKpGO8ynGpo9M/kFXSzghwug==",
       "path": "microsoft.sqlserver.server/1.0.0",
       "hashPath": "microsoft.sqlserver.server.1.0.0.nupkg.sha512"
+    },
+    "Microsoft.TypeScript.MSBuild/5.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-anuU+9I9xKlho/N71AUEt5vU0CNNVPkQr8ISkOYnrW0gqZbeJmkfjahV71ykipngsWrIe0QxXNNJvurpEiuM7Q==",
+      "path": "microsoft.typescript.msbuild/5.2.2",
+      "hashPath": "microsoft.typescript.msbuild.5.2.2.nupkg.sha512"
     },
     "Microsoft.VisualStudio.Debugger.Contracts/17.2.0": {
       "type": "package",

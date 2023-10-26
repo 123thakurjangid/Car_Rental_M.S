@@ -77,6 +77,10 @@
       "PackagePath": "staticwebassets\\css\\Admin.css"
     },
     {
+      "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\css\\Panlty_PopUp.css",
+      "PackagePath": "staticwebassets\\css\\Panlty_PopUp.css"
+    },
+    {
       "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\css\\User_Login.css",
       "PackagePath": "staticwebassets\\css\\User_Login.css"
     },

@@ -1,0 +1,13 @@
+﻿.hide {
+    display: none;
+}
+
+.myDIV:hover + .hide {
+    display: block;
+    color: red;
+}
+.popup{
+    background-color:black;
+    width:21vh;
+    margin-top:-4vh;
+}

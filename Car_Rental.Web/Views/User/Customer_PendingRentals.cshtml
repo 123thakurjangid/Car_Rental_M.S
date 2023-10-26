@@ -6,7 +6,7 @@
 <table class="table table-striped table-hover">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Car_Id)
+            Id
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Customer_Name)
@@ -28,6 +28,9 @@
         </th>
         <th>
             Fees
+        </th>
+        <th>
+            Final Fee <br /> Fee+Panlty
         </th>
         <th>
             Status
@@ -59,7 +62,19 @@
                 @Html.DisplayFor(modelItem => item.Return_Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Price)
+                    @Html.DisplayFor(modelItem => item.Price)         
+            </td>
+            <td>
+                @{
+                    var expiredate = item.Return_Date;
+                    var currentdate = DateTime.Now;
+                    var Panlty = 200 * (currentdate - expiredate).Days;
+                    var Late_day = (currentdate - expiredate).Days;
+                    var Total_Fee = item.Price + Panlty;
+
+                }
+                <div class="myDIV">@Total_Fee</div>
+                <div class="hide popup">Extra_days = @Late_day days Rental_panlty = @Panlty₹ Total_Fee =<u>@Total_Fee</u></div>
             </td>
             <th>
                 Booked
@@ -68,11 +83,24 @@
                 @if (HttpContextAccessor.HttpContext.Session.GetString("UserEmail").ToUpper() == item.Customer_Email_Id.ToUpper() ||
                      HttpContextAccessor.HttpContext.Session.GetString("LoginBy") != "Customer")
                 {
-                    @Html.ActionLink("Remove", "Delete","Pending_Rentals", new { id = item.Car_Id})
+                    if (HttpContextAccessor.HttpContext.Session.GetString("LoginBy") != "Customer")
+                    {
+                        @Html.ActionLink("Remove", "Delete","Pending_Rentals", new { id = item.Car_Id})
+                    }
+                    else if(Panlty <= 0)
+                    {
+                        @Html.ActionLink("Remove", "Delete","Pending_Rentals", new { id = item.Car_Id})
+                    }
+                    else
+                    {
+                        <strike onclick="myFunction()">Remove</strike>          
+                    }
+               
                 }
                 else
                 {
-                    <strike>Remove</strike>
+                    <strike onclick="myFunction1()">Remove</strike>
+
                 }
             </td>
         </tr>
