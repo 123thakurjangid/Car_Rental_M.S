@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wvPCXx6vXSDr4WrYdlpF7Aga1IO2N36NePlMv5QhfbQ=",
+  "Hash": "wZh+zXUpouluD3HYtGtJse8QJYHYyV+miFQWac2lxSY=",
   "Source": "Car_Rental.Web",
   "BasePath": "_content/Car_Rental.Web",
   "Mode": "Default",
@@ -321,6 +321,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Image\\Ganeshji.png",
+      "SourceId": "Car_Rental.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\",
+      "BasePath": "_content/Car_Rental.Web",
+      "RelativePath": "Image/Ganeshji.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Ganeshji.png"
     },
     {
       "Identity": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Image\\Profile pic.jfif",

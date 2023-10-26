@@ -1,4 +1,5 @@
 ﻿@model Car_Rental.Business.Model.User_Home_SelectModel
+@inject IHttpContextAccessor HttpContextAccessor
 
 <div class="row">
     <div class="column">
@@ -15,9 +16,10 @@
             <input class="col-sm-9" asp-for="Customer_Name" placeholder="Enter Your Name" /><br />
             <span class="text-danger" asp-validation-for="Customer_Name"></span><br />
 
-            <label>Customer Email Id</label><br />
-            <input class="col-sm-9" asp-for="Customer_Email_id" placeholder="This email id and your login email id must be same" /><br />
-            <span class="text-danger" asp-validation-for="Customer_Email_id"></span><br />
+            @{
+                var mail = HttpContextAccessor.HttpContext.Session.GetString("UserEmail");
+            }
+            <input class="col-sm-9" asp-for="Customer_Email_id" value="@mail" hidden readonly/>
 
             <label>Car Plate Number</label><br />
             <input class="col-sm-9" asp-for="Plate_Number" readonly/><br />
