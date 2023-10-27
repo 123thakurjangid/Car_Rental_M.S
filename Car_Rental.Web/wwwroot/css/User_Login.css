@@ -99,3 +99,11 @@ m {
     border-radius: 50%;
     border: 2px solid #fff;
 }
+
+                                /*User Profile Pic*/
+
+.about {
+    text-align: center;
+    padding-top: 25vh;
+    color: white;
+}

@@ -73,8 +73,17 @@
                     var Total_Fee = item.Price + Panlty;
 
                 }
-                <div class="myDIV">@Total_Fee</div>
-                <div class="hide popup">Extra_days = @Late_day days Rental_panlty = @Panlty₹ Total_Fee =<u>@Total_Fee</u></div>
+
+                @if(Late_day <= 0)
+                {
+                    <div class="myDIV">@item.Price</div>
+                    <div class="hide popup">Extra_days = 0 days Rental_panlty = 0₹ Total_Fee =<u>@item.Price</u></div>
+                }
+                else
+                {
+                    <div class="myDIV">@Total_Fee</div>
+                    <div class="hide popup">Extra_days = @Late_day days Rental_panlty = @Panlty₹ Total_Fee =<u>@Total_Fee</u></div>
+                }
             </td>
             <th>
                 Booked

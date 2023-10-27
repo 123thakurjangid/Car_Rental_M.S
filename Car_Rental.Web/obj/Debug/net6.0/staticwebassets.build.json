@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VlvBbiuSmeOJ3jKCAMYGwlk+qrarpbothPFGGGoGTn0=",
+  "Hash": "l+wHFNd9mr5QtvHUe+GMPbpwwiqpnLLnPQtmjc2OuHc=",
   "Source": "Car_Rental.Web",
   "BasePath": "_content/Car_Rental.Web",
   "Mode": "Default",
@@ -204,6 +204,23 @@
       "OriginalItemSpec": "wwwroot\\AdminPanelCars\\User.png"
     },
     {
+      "Identity": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Car_Images\\About.jpg",
+      "SourceId": "Car_Rental.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\",
+      "BasePath": "_content/Car_Rental.Web",
+      "RelativePath": "Car_Images/About.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Car_Images\\About.jpg"
+    },
+    {
       "Identity": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Car_Images\\Customers.png",
       "SourceId": "Car_Rental.Web",
       "SourceType": "Discovered",
@@ -219,23 +236,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Car_Images\\Customers.png"
-    },
-    {
-      "Identity": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Car_Images\\Lambo.png",
-      "SourceId": "Car_Rental.Web",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\",
-      "BasePath": "_content/Car_Rental.Web",
-      "RelativePath": "Car_Images/Lambo.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Car_Images\\Lambo.png"
     },
     {
       "Identity": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Car_Images\\SuperCar.png",
