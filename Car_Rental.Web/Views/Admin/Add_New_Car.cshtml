@@ -24,11 +24,10 @@
 
             <label >Color</label><br />
             <input class="col-sm-9" type="text" asp-for="Color" placeholder="Enter Color" /> <br />
-            <span class="text-danger" asp-validation-for="Color"></span><br />
+            <span class="text-danger" asp-validation-for="Color"></span>
 
-            <label >Available</label><br />
-            <input class="col-sm-9" type="text" asp-for="Available" placeholder="Available or Not" /><br />
-            <span class="text-danger" asp-validation-for="Available"></span><br />
+            <input class="col-sm-9" type="text" asp-for="Available" value="Available" hidden readonly/><br />
+            <span class="text-danger" asp-validation-for="Available"></span>
 
             <input class="col-sm-9 btn btn-outline-warning" type="submit" value="Save" />
 

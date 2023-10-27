@@ -5,16 +5,19 @@ using Car_Rental.Data.DbContexts;
 using Car_Rental.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.VisualBasic;
 
 namespace Car_Rental.Web.Controllers
 {
     public class AdminController : Controller
     {
+        private readonly IPendingRentals_Service _pendingRentalsService; //1st
         private readonly ICarService _carService;
         private readonly LoginDbContext _cardbcontext;
         public AdminController() 
         {
+            _pendingRentalsService = new Pending_Rental_Service(); //2nd
             _carService = new CarService();
             _cardbcontext = new LoginDbContext();
         }
@@ -79,7 +82,36 @@ namespace Car_Rental.Web.Controllers
         {
             List<CarModel> cars = new List<CarModel>();
             cars = _carService.getAllCars();
+
+            /*st*/
+            List<Pending_RentalsModel> Rentals = new List<Pending_RentalsModel>();
+            Rentals = _pendingRentalsService.GetRentals();
+
+            var k = "";
+            foreach (var item in cars)
+            {
+                int Search_id = item.Car_Id;
+                if(Search_id != null)
+                {
+                    var data = Rentals.Where(Model => Model.Car_Id == Search_id).ToList();
+                    int id = data.Count;
+                    if (id>0)
+                    {
+                        item.Available = "Not Available";
+                        k = "Mil gyi";
+                    }
+                    else
+                    {
+                        item.Available = "Available";
+                        k = "Nahi meli";
+                    }
+                }
+
+            }
+            /*end*/
+
             return View(cars);
+
         }
 
         public IActionResult Delete(int Id)
