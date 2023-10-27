@@ -5,7 +5,7 @@ Car Rental Web Application
 
 ![Car rental database](https://github.com/123thakurjangid/Car_Rental_M.S/assets/105066538/74eba633-08b7-4ac2-b60e-2aeb8fa6da58)
 
-#Step 2 Create 4 tables in the Car_Rental_Management_System
+#Step 2 Create 4 tables in the database of Car_Rental_Management_System
 
 1st dbo.Car
 ![Cars db_tabel](https://github.com/123thakurjangid/Car_Rental_M.S/assets/105066538/e6a98096-16d8-4903-ae64-de0d55cae2ae)
