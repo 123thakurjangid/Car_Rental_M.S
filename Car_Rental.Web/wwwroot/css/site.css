@@ -81,9 +81,9 @@ body {
 
 .footer_location_text {
     width: 100%;
-    margin-top:-15vh;
     margin-bottom:-12vh;
     padding-left:15vh;
+    margin-top:-7vh;
 }
 
     .footer_location_text ul {

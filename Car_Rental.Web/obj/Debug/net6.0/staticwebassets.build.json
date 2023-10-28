@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+nevUSGR6Fy0ryRigUwidN6yQbfrnJYS7EmC4JRSKfk=",
+  "Hash": "AXhNJHLqUnjNVC++5SqRQxagZQ8hjDj37HPJn0yLgxk=",
   "Source": "Car_Rental.Web",
   "BasePath": "_content/Car_Rental.Web",
   "Mode": "Default",
@@ -372,6 +372,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Image\\Ganeshji.png"
+    },
+    {
+      "Identity": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Image\\Nikhil.jpg",
+      "SourceId": "Car_Rental.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\",
+      "BasePath": "_content/Car_Rental.Web",
+      "RelativePath": "Image/Nikhil.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Nikhil.jpg"
     },
     {
       "Identity": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Image\\Profile pic.jfif",

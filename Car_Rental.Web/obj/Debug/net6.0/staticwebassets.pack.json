@@ -61,6 +61,10 @@
       "PackagePath": "staticwebassets\\Image\\Ganeshji.png"
     },
     {
+      "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Image\\Nikhil.jpg",
+      "PackagePath": "staticwebassets\\Image\\Nikhil.jpg"
+    },
+    {
       "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Image\\Profile pic.jfif",
       "PackagePath": "staticwebassets\\Image\\Profile pic.jfif"
     },
