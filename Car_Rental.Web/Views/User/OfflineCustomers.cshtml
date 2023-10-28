@@ -40,8 +40,8 @@
                 @Html.DisplayFor(modelItem => item.Customer_City)
             </td>
             <td>
-                <t class="Customer_Delete">@Html.ActionLink("Delete", "Delete", new { id = item.Customer_Id})</t>
-                @Html.ActionLink("Update", "UpdateOfflineCustomer", new { id = item.Customer_Id})
+                @Html.ActionLink("Delete", "Delete", new { id = item.Customer_Id}, new {@class ="btn btn-danger btn-sm"}) &nbsp;&nbsp;&nbsp;
+                @Html.ActionLink("Update", "UpdateOfflineCustomer", new { id = item.Customer_Id}, new {@class ="btn btn-success btn-sm"})
             </td>
         </tr>
     }

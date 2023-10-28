@@ -94,21 +94,21 @@
                 {
                     if (HttpContextAccessor.HttpContext.Session.GetString("LoginBy") != "Customer")
                     {
-                        @Html.ActionLink("Remove", "Delete","Pending_Rentals", new { id = item.Car_Id})
+                        @Html.ActionLink("Delete", "Delete","Pending_Rentals", new { id = item.Car_Id}, new{@class = "btn btn-danger btn-sm"})
                     }
                     else if(Panlty <= 0)
                     {
-                        @Html.ActionLink("Remove", "Delete","Pending_Rentals", new { id = item.Car_Id})
+                        @Html.ActionLink("Delete", "Delete","Pending_Rentals", new { id = item.Car_Id}, new{@class = "btn btn-danger btn-sm"})
                     }
                     else
                     {
-                        <strike onclick="myFunction()">Remove</strike>          
+                        <button class="btn btn-danger btn-sm"> <strike onclick="myFunction()">Delete</strike> </button>
                     }
                
                 }
                 else
                 {
-                    <strike onclick="myFunction1()">Remove</strike>
+                    <button class="btn btn-danger btn-sm"> <strike onclick="myFunction1()">Delete</strike> </button>
 
                 }
             </td>

@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\Car_Images\\Customers.png"
     },
     {
+      "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Car_Images\\Lambo.png",
+      "PackagePath": "staticwebassets\\Car_Images\\Lambo.png"
+    },
+    {
       "Id": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Web\\wwwroot\\Car_Images\\SuperCar.png",
       "PackagePath": "staticwebassets\\Car_Images\\SuperCar.png"
     },

@@ -20,7 +20,6 @@ namespace Car_Rental.Business.Model
         public string? User_Email { get; set; }
         [Required(ErrorMessage = "Please Enter Password !!")]
         public string? User_Password { get; set; }
-
         public string? AttachmentUrl { get; set; }
         public IFormFile? Attachmentfile { get; set; }
     }

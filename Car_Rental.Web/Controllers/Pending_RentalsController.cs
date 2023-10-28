@@ -67,7 +67,7 @@ namespace Car_Rental.Web.Controllers
                     if (result)
                     {
                         TempData["Message"] = "Car Rented";
-                        return RedirectToAction("Customer_PendingRentals", "Pending_Rentals");
+                        return RedirectToAction("Customer_PendingRentals", "User");
                     }
                     else
                     {
@@ -88,16 +88,16 @@ namespace Car_Rental.Web.Controllers
         {
             if (Id == 0)
             {
-                TempData["Message"] = "Record not found to delte !";
+                TempData["Message"] = "Record not found to delete !";
             }
             if (_pendingRentalsService.Delete(Id))
             {
-                TempData["Message"] = "Rental Removed";
+                TempData["Message"] = "Rental Deleted";
 
             }
             else
             {
-                TempData["Message"] = "Rental not Remove !";
+                TempData["Message"] = "Rental not Deleted !";
             }
             return RedirectToAction("Customer_PendingRentals", "User");
         }

@@ -275,7 +275,7 @@ namespace Car_Rental.Web.Controllers
         {
             if (Id == 0)
             {
-                TempData["Message"] = "Record not found to delte !";
+                TempData["Message"] = "Record not found to delete !";
             }
             if (_customerService.Delete(Id))
             {
@@ -292,7 +292,7 @@ namespace Car_Rental.Web.Controllers
         {
             if (Id == 0)
             {
-                TempData["Message"] = "Record not found to delte !";
+                TempData["Message"] = "Record not found to delete !";
             }
             if (loginService.DeleteOnlineCustomer(Id))
             {
@@ -388,7 +388,7 @@ namespace Car_Rental.Web.Controllers
                 user.ATTACHMENTURL = filepath + model.Attachmentfile.FileName;
 
                 await _loginDbContext.SaveChangesAsync();
-                TempData["Message"] = "Details Updated Successfully , its shows when you Login Next Time";
+                TempData["Message"] = "Profile Updated Successfully , its shows when you Login Next Time";
                 return RedirectToAction("Customers_Car_Inventory", "Admin");
             }
 

@@ -23,7 +23,7 @@
             @Html.DisplayNameFor(model => model.Color)
         </th>
         <th>
-            Status🟢
+            Status
         </th>
         <th>For Rent</th>
     </tr>
@@ -54,11 +54,11 @@
 
                     if (status == "AVAILABLE" || status == "YES")
                     {
-                        @Html.DisplayFor(modelItem => item.Available) <t>🟢</t>
+                        @Html.DisplayFor(modelItem => item.Available) <t class="small">🟢</t>
                     }
                     else
                     {
-                        @Html.DisplayFor(modelItem => item.Available) <t>🔴</t>
+                        @Html.DisplayFor(modelItem => item.Available) <t class="small">🔴</t>
                     }
                 }
             </td>
@@ -67,11 +67,12 @@
 
                     if (status == "AVAILABLE" || status == "YES")
                     {
-                        @Html.ActionLink("Select", "Add_Pending_Rentals", "Pending_Rentals", new { id = item.Car_Id})
+                        @Html.ActionLink("Select", "Add_Pending_Rentals", "Pending_Rentals", new { id = item.Car_Id}, new {@class = "btn btn-primary btn-sm"})
                     }
                     else
                     {
-                        <strike class="text-primary">Select</strike>
+                        <button class="btn btn-primary btn-sm"><strike>Select</strike></button>
+                        /* <strike class="text-primary">Select</strike> */
                     }
                 }
             </td>

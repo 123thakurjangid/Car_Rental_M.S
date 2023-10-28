@@ -23,7 +23,7 @@
             @Html.DisplayNameFor(model => model.Color)
         </th>
         <th>
-            Status🟢
+            Status
         </th>
         <th></th>
     </tr>
@@ -53,17 +53,17 @@
                     var status = item.Available.ToUpper();
                     if (status == "AVAILABLE" || status == "YES")
                     {
-                        @Html.DisplayFor(modelItem => item.Available) <t>🟢</t>
+                        @Html.DisplayFor(modelItem => item.Available) <t class="small">🟢</t>
                     }
                     else
                     {
-                        @Html.DisplayFor(modelItem => item.Available) <t>🔴</t>
+                        @Html.DisplayFor(modelItem => item.Available) <t class="small">🔴</t>
                     }
                 }
             </td>
             <td>
-                <t id="Car_Delete"> @Html.ActionLink("Delete", "Delete", new { id = item.Car_Id})</t>
-                @Html.ActionLink("Update", "UpdateCar", new { id = item.Car_Id})
+                @Html.ActionLink("Delete", "Delete", new { id = item.Car_Id}, new { @class = "btn btn-danger btn-sm"}) &nbsp;&nbsp;&nbsp;
+                @Html.ActionLink("Update", "UpdateCar", new { id = item.Car_Id}, new { @class = "btn btn-success btn-sm"})
             </td>
         </tr>
     }

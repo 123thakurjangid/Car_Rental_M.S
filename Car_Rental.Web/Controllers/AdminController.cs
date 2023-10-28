@@ -113,7 +113,7 @@ namespace Car_Rental.Web.Controllers
         {
             if (Id == 0)
             {
-                TempData["Message"] = "Record not found to delte !";
+                TempData["Message"] = "Record not found to delete !";
             }
             if (_carService.Delete(Id))
             {

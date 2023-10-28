@@ -60,8 +60,8 @@
                     else
                     {
                         <td>
-                            <t class="Customer_Delete">@Html.ActionLink("Delete", "DeleteOnlineCustomer", new { id = item.Id})</t>
-                            @Html.ActionLink("Update", "UpdateCustomer", new { id = item.Id})
+                            @Html.ActionLink("Delete", "DeleteOnlineCustomer", new { id = item.Id}, new {@class ="btn btn-danger btn-sm"}) &nbsp;&nbsp;&nbsp;
+                            @Html.ActionLink("Update", "UpdateCustomer", new { id = item.Id}, new {@class ="btn btn-success btn-sm"})
                         </td>
 
                     }
