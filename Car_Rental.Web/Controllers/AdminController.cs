@@ -23,16 +23,40 @@ namespace Car_Rental.Web.Controllers
         }
         public IActionResult Admin_Pannel()
         {
+            string? UserName = HttpContext.Session.GetString("UserEmail");
+            string? UserID = HttpContext.Session.GetString("UserID");
+
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserID))
+            {
+                return RedirectToAction("Login_Form", "User");
+            }
+
             return View();
         }
 
         public IActionResult Customers_Car_Inventory()
         {
+            string? UserName = HttpContext.Session.GetString("UserEmail");
+            string? UserID = HttpContext.Session.GetString("UserID");
+
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserID))
+            {
+                return RedirectToAction("Login_Form","User");
+            }
+
             return View();
         }
 
         public IActionResult Add_New_Car()
-        {       
+        {
+            string? UserName = HttpContext.Session.GetString("UserEmail");
+            string? UserID = HttpContext.Session.GetString("UserID");
+
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserID))
+            {
+                return RedirectToAction("Login_Form", "User");
+            }
+
             CarModel model = new CarModel();
             return View(model);
         }
@@ -72,6 +96,14 @@ namespace Car_Rental.Web.Controllers
         [HttpGet]
         public IActionResult AvailableCars()
         {
+            string? UserName = HttpContext.Session.GetString("UserEmail");
+            string? UserID = HttpContext.Session.GetString("UserID");
+
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserID))
+            {
+                return RedirectToAction("Login_Form", "User");
+            }
+
             List<CarModel> cars = new List<CarModel>();
             cars = _carService.getAllCars();
             return View(cars);
@@ -80,6 +112,14 @@ namespace Car_Rental.Web.Controllers
         [HttpGet]
         public IActionResult Customer_Home_Page()
         {
+            string? UserName = HttpContext.Session.GetString("UserEmail");
+            string? UserID = HttpContext.Session.GetString("UserID");
+
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserID))
+            {
+                return RedirectToAction("Login_Form", "User");
+            }
+
             List<CarModel> cars = new List<CarModel>();
             cars = _carService.getAllCars();
 
@@ -130,6 +170,14 @@ namespace Car_Rental.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> UpdateCar(int id)
         {
+            string? UserName = HttpContext.Session.GetString("UserEmail");
+            string? UserID = HttpContext.Session.GetString("UserID");
+
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserID))
+            {
+                return RedirectToAction("Login_Form", "User");
+            }
+
             var car = await _cardbcontext.Car.FirstOrDefaultAsync(x => x.CAR_ID == id);
 
             var viewmodel = new UpdateCarModel()

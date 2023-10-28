@@ -105,6 +105,14 @@ namespace Car_Rental.Web.Controllers
         [HttpGet]
         public async Task<IActionResult> Add_Pending_Rentals(int id)
         {
+            string? UserName = HttpContext.Session.GetString("UserEmail");
+            string? UserID = HttpContext.Session.GetString("UserID");
+
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserID))
+            {
+                return RedirectToAction("Login_Form", "User");
+            }
+
             var RentalDetails = await _loginDbContext.Car.FirstOrDefaultAsync(x => x.CAR_ID == id);
 
             var viewmodel = new User_Home_SelectModel()
@@ -120,6 +128,14 @@ namespace Car_Rental.Web.Controllers
 
         public IActionResult Renting_For_Offline_Customers()
         {
+            string? UserName = HttpContext.Session.GetString("UserEmail");
+            string? UserID = HttpContext.Session.GetString("UserID");
+
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserID))
+            {
+                return RedirectToAction("Login_Form", "User");
+            }
+
             return View();
         }
     }
