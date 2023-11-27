@@ -25,5 +25,7 @@ namespace Car_Rental.Data.DbContexts
         public DbSet<Car> Car { get; set; }
         public DbSet<Customer> Customer { get; set; }
         public DbSet<Pending_Rental> Pending_Rental { get; set; }
+        public DbSet<Rentals_History> Rentals_History { get; set; }
+
     }
 }

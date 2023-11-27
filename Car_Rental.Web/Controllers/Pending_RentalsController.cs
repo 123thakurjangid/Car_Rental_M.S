@@ -12,10 +12,12 @@ namespace Car_Rental.Web.Controllers
     {
         private readonly IPendingRentals_Service _pendingRentalsService;
         private readonly LoginDbContext _loginDbContext;
+        private readonly IRentals_History_Service _historyService;
         public Pending_RentalsController()
         {
             _pendingRentalsService = new Pending_Rental_Service();
             _loginDbContext = new LoginDbContext();
+            _historyService = new Rentals_History_Service();
         }
 
         [HttpPost]
@@ -30,9 +32,11 @@ namespace Car_Rental.Web.Controllers
             {
                 try 
                 {
-                    bool result = _pendingRentalsService.AddRentals(rmodel);
+                    bool result = _pendingRentalsService.AddRentals(rmodel);  // for saving rental
                     if (result)
                     {
+                        bool history = _historyService.Add_Rentals_History(rmodel); //for Saving History
+
                         TempData["Message"] = "Car Rented";
                         return RedirectToAction("Customer_PendingRentals", "User");
                     }
@@ -49,6 +53,22 @@ namespace Car_Rental.Web.Controllers
                 }
             }
 
+        }
+
+        [HttpGet]
+        public IActionResult Show_History()
+        {
+            string? UserName = HttpContext.Session.GetString("UserEmail");
+            string? UserID = HttpContext.Session.GetString("UserID");
+
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserID))
+            {
+                return RedirectToAction("Login_Form", "User");
+            }
+
+            List<Pending_RentalsModel> models = new List<Pending_RentalsModel>();
+            models = _historyService.Get_History();
+            return View(models);
         }
 
         [HttpPost]

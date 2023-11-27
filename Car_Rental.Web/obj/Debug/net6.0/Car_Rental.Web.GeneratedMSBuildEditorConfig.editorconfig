@@ -48,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVuZGluZ19SZW50YWxzXFJlbnRpbmdfRm9yX09mZmxpbmVfQ3VzdG9tZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Pending_Rentals/Show_History.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVuZGluZ19SZW50YWxzXFNob3dfSGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/thaku/source/repos/Car_Rental_M.S/Car_Rental.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
