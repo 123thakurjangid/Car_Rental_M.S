@@ -11,7 +11,7 @@
         "projectName": "Car_Rental.Business",
         "projectPath": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Business\\Car_Rental.Business.csproj",
         "packagesPath": "C:\\Users\\thaku\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\thaku\\Source\\Repos\\Car_Rental_M.S\\Car_Rental.Business\\obj\\",
+        "outputPath": "C:\\Users\\thaku\\source\\repos\\Car_Rental_M.S\\Car_Rental.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thaku\\AppData\\Roaming\\NuGet\\NuGet.Config",

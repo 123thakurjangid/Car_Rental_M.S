@@ -11,5 +11,7 @@
     <input class="col-sm-5" type="password" asp-for="User_Password" placeholder="Enter Password" /><br />
     <span class="text-danger" asp-validation-for="User_Password"></span><br />
     <input class="col-sm-5  btn btn-outline-warning" type="submit" value="Register" /><br />
+    <div class="login_forget_Link">
     @Html.ActionLink("If you already a user", "Login_Form")
+    </div>
 </form>

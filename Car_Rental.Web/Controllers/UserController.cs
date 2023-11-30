@@ -502,6 +502,8 @@ namespace Car_Rental.Web.Controllers
             if (ReciverMail != null)
             {
                 TempData["usermail"] = ReciverMail;
+                var time = DateTime.Now.Minute.ToString();
+                TempData["time"] = time;
                 var MAIL = _loginDbContext.Login.Where(x => x.USER_EMAIL == ReciverMail).FirstOrDefault();
                 try
                 {
@@ -514,7 +516,7 @@ namespace Car_Rental.Web.Controllers
                         message.From = new MailAddress(fromMail);
                         message.Subject = "Car Rental Web Application.";
                         message.To.Add(new MailAddress(ReciverMail));
-                        message.Body = "<html><body> for reset your passw.. click on this link https://localhost:7243/user/Reset_Passw </body></html>";
+                        message.Body = "<html><body> <h1>One time link</h1> <p> For reset your passw.. simply click on this link <p/> <p> https://localhost:7243/user/Reset_Passw <p/> <p> This link expire after 5minutes.<p/> </body></html>";
                         message.IsBodyHtml = true;
 
                         var smtpclient = new SmtpClient("smtp.gmail.com")
@@ -546,6 +548,15 @@ namespace Car_Rental.Web.Controllers
 
         public IActionResult Reset_Passw()
         {
+            int Expire_time = int.Parse(TempData["time"].ToString())+2;
+            var updated_time = DateTime.Now.Minute.ToString();
+            int now_time = int.Parse(updated_time);
+            if (now_time > Expire_time)
+            {
+                TempData["Message"] = "Link expire ";
+                return RedirectToAction("Forget_Password", "User");
+            }
+            
             return View();
         }
 
