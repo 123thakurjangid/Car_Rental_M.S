@@ -489,5 +489,85 @@ namespace Car_Rental.Web.Controllers
 
             return View();
         }
+
+        public IActionResult Forget_Password()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Forget_Password1(String ReciverMail)
+        {
+
+            if (ReciverMail != null)
+            {
+                TempData["usermail"] = ReciverMail;
+                var MAIL = _loginDbContext.Login.Where(x => x.USER_EMAIL == ReciverMail).FirstOrDefault();
+                try
+                {
+                    if (MAIL != null)
+                    {
+                        string fromMail = "123thakurjangid@gmail.com";
+                        string fromPassword = "fdxbcnpxstughuml";
+
+                        MailMessage message = new MailMessage();
+                        message.From = new MailAddress(fromMail);
+                        message.Subject = "Car Rental Web Application.";
+                        message.To.Add(new MailAddress(ReciverMail));
+                        message.Body = "<html><body> for reset your passw.. click on this link https://localhost:7243/user/Reset_Passw </body></html>";
+                        message.IsBodyHtml = true;
+
+                        var smtpclient = new SmtpClient("smtp.gmail.com")
+                        {
+                            Port = 587,
+                            Credentials = new NetworkCredential(fromMail, fromPassword),
+                            EnableSsl = true,
+                        };
+
+                        smtpclient.Send(message);
+                        TempData["Message"] = "Check yout email to reset your password";
+                        return RedirectToAction("Customer_Home_Page", "Admin");
+                    }
+                    else
+                    {
+                        TempData["Message"] = "Mail Does not exist in database !";
+                        return RedirectToAction("Forget_Password", "User");
+                    }
+                }
+                catch (Exception)
+                {
+                    TempData["Message"] = "Request fail to send! Check Your Internet Connection ! Or field Value should be null";
+                    return RedirectToAction("Forget_Password", "User");
+                }
+            }
+
+            return View();
+        }
+
+        public IActionResult Reset_Passw()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Reset_Passw1(string newpassword1, string newpassword2)
+        {
+            if (newpassword1 == newpassword2)
+            {
+                var mail = TempData["usermail"];
+
+                var db = _loginDbContext.Login.Where(x => x.USER_EMAIL == mail).FirstOrDefault();
+
+                db.USER_PASSWORD = newpassword1;
+                _loginDbContext.SaveChanges();
+                TempData["Message"] = "Password Successfully Changed";
+                return RedirectToAction("Login_Form");
+            }
+            else
+            {
+                TempData["Message"] = "Both filds value must be same";
+                return RedirectToAction("Reset_Passw");
+            }
+        }
     }
 }

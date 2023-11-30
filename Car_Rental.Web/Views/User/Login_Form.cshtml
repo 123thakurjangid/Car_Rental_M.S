@@ -14,5 +14,8 @@
     </div>
     <span class="text-danger" asp-validation-for="User_Password"></span><br />
     <input class="col-sm-5  btn btn-outline-warning" type="submit" value="Login" /><br />
-    @Html.ActionLink("If you are a new user", "Registration_Page")
+    <div class="login_forget_Link">
+        @Html.ActionLink("If you are a new user", "Registration_Page") ||
+        @Html.ActionLink("Forget Passward", "Forget_Password")
+    </div>
 </form>

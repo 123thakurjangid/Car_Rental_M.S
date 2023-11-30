@@ -20,13 +20,18 @@ body{
 .LoginBy{
     margin-left:-52vh;
 }
-                                        /*********Customers-Css*********/
-#AdminChecked{
-    background-color:red;
-    padding-bottom:4px;
-    padding-right:1vh;
-    padding-left:1vh;
-    border-radius:25px;
+.login_forget_Link {
+    text-align: left;
+    margin-left: 49.5vh;
+    margin-top:1px;
+}
+                                    /*********Customers-Css*********/
+#AdminChecked {
+    background-color: red;
+    padding-bottom: 4px;
+    padding-right: 1vh;
+    padding-left: 1vh;
+    border-radius: 25px;
 }
 
                                     /*********Offline-Customers-Css*********/
@@ -107,3 +112,33 @@ m {
     padding-top: 25vh;
     color: white;
 }
+
+                                   /*Forget Password*/
+
+.forget_head {
+    margin-bottom: 5vh;
+}
+
+.forget {
+    text-align: center;
+    margin: 45vh;
+    margin-top: 25vh;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    padding: 5vh;
+    margin-bottom:-5vh;
+}
+
+#sendbtn {
+    margin: 2vh
+}
+
+                                    /*Reset Password*/
+
+.newpasinput {
+    margin: 1vh;
+}
+                            
