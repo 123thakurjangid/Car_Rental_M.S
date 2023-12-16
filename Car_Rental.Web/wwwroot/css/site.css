@@ -3,8 +3,6 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    margin-bottom:10vh;
-    margin-top:-10vh;
     margin-right:51vh;
     margin-left:66vh;
 }
@@ -15,6 +13,7 @@
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #fff;
+    margin-left:50vh;
 }
 /* User update form section end */
 
@@ -22,11 +21,10 @@
 .Aprofile-pich {
     width: 45px;
     height: 45px;
+    object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 10vh;
-    margin-top: -10vh;
-    margin-right: 50vh;
-    margin-left: 40vh;
+    border: 0.5px solid #fff;
+    margin-left: 93vh;
 }
 
 .Aprofile-pich img {

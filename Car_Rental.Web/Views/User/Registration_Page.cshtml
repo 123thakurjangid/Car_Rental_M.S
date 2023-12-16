@@ -1,6 +1,8 @@
 ﻿@model Car_Rental.Business.Model.LoginModel
 
+<div class="LogImg">
 <img src="~/Car_Images/Lambo.png" />
+</div>
 
 <form asp-action="SaveUser" asp-controller="User" method="post" enctype="multipart/form-data">
     @*<input class="col-sm-5" type="file" asp-for="Attachmentfile" accept=".png,.jpg,.jpeg,.gif,.jfif" /><br />*@
@@ -12,6 +14,6 @@
     <span class="text-danger" asp-validation-for="User_Password"></span><br />
     <input class="col-sm-5  btn btn-outline-warning" type="submit" value="Register" /><br />
     <div class="login_forget_Link">
-    @Html.ActionLink("If you already a user", "Login_Form")
+    @Html.ActionLink("If you already a user >>", "Login_Form")
     </div>
 </form>
