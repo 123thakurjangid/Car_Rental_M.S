@@ -16,6 +16,23 @@
             <input class="col-sm-9" asp-for="Customer_Name" placeholder="Enter Your Name" /><br />
             <span class="text-danger" asp-validation-for="Customer_Name"></span><br />
 
+            <label>Customer Mobile No.</label><br />
+            <input class="col-sm-9" asp-for="Customer_Mobile_No" placeholder="Enter Your Mobile Number" /><br />
+            <span class="text-danger" asp-validation-for="Customer_Mobile_No"></span><br />
+
+            <label>Customer Addhar number</label><br />
+            <input class="col-sm-9" asp-for="Customer_Addhar_No" placeholder="Enter Your Name" /><br />
+            <span class="text-danger" asp-validation-for="Customer_Addhar_No"></span><br />
+
+            <label>Customer City</label><br />
+            <input class="col-sm-9" asp-for="Customer_Home_City" placeholder="Enter Your City" /><br />
+            <span class="text-danger" asp-validation-for="Customer_Home_City"></span><br />
+
+            <label>Customer Address</label><br />
+            @*<input class="col-sm-9" asp-for="Customer_Home_Address" placeholder="Enter Your Home Address" /><br />*@
+            <textarea class="col-sm-9" asp-for="Customer_Home_Address" placeholder="Enter Your Home Address" rows="4" cols="50"></textarea>
+            <span class="text-danger" asp-validation-for="Customer_Home_Address"></span><br />
+
             @{
                 var mail = HttpContextAccessor.HttpContext.Session.GetString("UserEmail");
             }

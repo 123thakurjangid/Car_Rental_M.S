@@ -3,17 +3,30 @@
 
 <h1>Rentals History</h1>
 <hr />
+<div class="CustomerPendigRentals">
 <table class="table table-striped table-hover">
     <tr>
         <th>
             Id
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Customer_Email_Id)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Customer_Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Customer_Email_Id)
+            @Html.DisplayNameFor(model => model.Customer_Mobile_No)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_Addhar_No)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_Home_City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_Home_Address)
+        </th>       
         <th>
             @Html.DisplayNameFor(model => model.Plate_Number)
         </th>
@@ -26,7 +39,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Return_Date)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
     </tr>
     @foreach (var item in Model)
     {
@@ -35,10 +50,37 @@
                 @Html.DisplayFor(modelItem => item.Car_Id)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Customer_Email_Id)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Customer_Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Customer_Email_Id)
+                @Html.DisplayFor(modelItem => item.Customer_Mobile_No)
+            </td>
+            <td>
+                    @{
+                        string addharnum = item.Customer_Addhar_No;
+                        string realaddhar = "";
+                        int cnt = 0;
+                        for (int i = 0; i < 12; i++)
+                        {
+                            realaddhar += addharnum[i];
+                            cnt++;
+                            if (cnt == 4 && i < 10)
+                            {
+                                realaddhar += '-';
+                                cnt = 0;
+                            }
+                        }
+                        @Html.DisplayFor(modelItem => realaddhar)
+                    }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer_Home_City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer_Home_Address)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Plate_Number)
@@ -58,3 +100,4 @@
         </tr>
     }
 </table>
+</div>

@@ -26,6 +26,10 @@ namespace Car_Rental.Business.Service
 
             rental.CAR_ID = model.Car_Id;
             rental.CUSTOMER_NAME = model.Customer_Name;
+            rental.CUSTOMER_ADDHAR_NO = model.Customer_Addhar_No;
+            rental.CUSTOMER_MOBILE_NO = model.Customer_Mobile_No;
+            rental.CUSTOMER_HOME_CITY = model.Customer_Home_City;
+            rental.CUSTOMER_HOME_ADDRESS = model.Customer_Home_Address;
             rental.PLATE_NUMBER = model.Plate_Number;
             rental.MODEL = model.Model;
             rental.PRICE = model.Price;
@@ -48,6 +52,10 @@ namespace Car_Rental.Business.Service
             {
                 Car_Id = x.CAR_ID,
                 Customer_Name = x.CUSTOMER_NAME,
+                Customer_Addhar_No = x.CUSTOMER_ADDHAR_NO,
+                Customer_Mobile_No = x.CUSTOMER_MOBILE_NO,
+                Customer_Home_City = x.CUSTOMER_HOME_CITY,
+                Customer_Home_Address = x.CUSTOMER_HOME_ADDRESS,
                 Plate_Number = x.PLATE_NUMBER,
                 Model = x.MODEL,
                 Price   = x.PRICE,

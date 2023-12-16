@@ -41,17 +41,25 @@ namespace Car_Rental.Business.Model
         public int Car_Id { get; set; }
         [Required(ErrorMessage = "Please Enter Name !")]
         public string? Customer_Name { get; set; }
-        [Required(ErrorMessage = "Please Enter Rent date !")]
+        [Required(ErrorMessage = "Please Enter your addhar number !")]
+        public string? Customer_Addhar_No { get; set; }
+        [Required(ErrorMessage = "Please enter your mobile number !")]
+        public string? Customer_Mobile_No { get; set; }
+        [Required(ErrorMessage = "Please enter Home address !")]
+        public string? Customer_Home_Address { get; set; }
+        [Required(ErrorMessage = "Please enter your home city !")]
+        public string? Customer_Home_City { get; set; }
+        [Required(ErrorMessage = "Please Enter rent date !")]
         public DateTime Rent_Date { get; set; }
-        [Required(ErrorMessage = "Please Enter Return Date !")]
+        [Required(ErrorMessage = "Please Enter return date !")]
         public DateTime Return_Date { get; set; }
         [Required(ErrorMessage = "Please Enter Plate number !")]
         public string? Plate_Number { get; set; }
-        [Required(ErrorMessage = "Please Enter model !")]
+        [Required(ErrorMessage = "Please Enter car model !")]
         public string? Model { get; set; }
-        [Required(ErrorMessage = "Please Enter Price !")]
+        [Required(ErrorMessage = "Please Enter car Price !")]
         public int Price { get; set; }
         [Required(ErrorMessage = "Please Enter Customer Email Id !")]
-        public string Customer_Email_id { get; set; }
+        public string? Customer_Email_id { get; set; }
     }
 }

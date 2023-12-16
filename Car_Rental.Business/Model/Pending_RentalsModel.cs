@@ -15,8 +15,16 @@ namespace Car_Rental.Business.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required(ErrorMessage = "Please enter Car_Id !")]
         public int Car_Id { get; set; }
-        [Required(ErrorMessage = "Please enter Customer Name !")]
+        [Required(ErrorMessage = "Please enter your Name !")]
         public string? Customer_Name { get; set; }
+        [Required(ErrorMessage = "Please enter your addhar card number !")]
+        public string? Customer_Addhar_No { get; set; }
+        [Required(ErrorMessage = "Please enter your mobile number ! !")]
+        public string? Customer_Mobile_No { get; set; }
+        [Required(ErrorMessage = "Please enter Home address !")]
+        public string? Customer_Home_Address { get; set; }
+        [Required(ErrorMessage = "Please enter your home city !")]
+        public string? Customer_Home_City { get; set; }
         [Required(ErrorMessage = "Please enter Car Plate Number !")]
         public string? Plate_Number { get; set; }
         [Required(ErrorMessage = "Please enter Car Model !")]

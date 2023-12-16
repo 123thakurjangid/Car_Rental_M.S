@@ -27,7 +27,7 @@ body {
     margin-left: 49.5vh;
     margin-top:1px;
 }
-/*********Customers-Css*********/
+                                /*********Customers-Css*********/
 #AdminChecked {
     background-color: red;
     padding-bottom: 4px;
@@ -142,4 +142,9 @@ m {
 .newpasinput {
     margin: 1vh;
 }
-                            
+      
+                                /*Customer_Pending_Rentels*/
+.CustomerPendigRentals {
+    overflow: scroll;
+    scroll-direction: horizontal;
+}
