@@ -4,63 +4,114 @@
 <div class="row">
     <div class="column">
         <h2 id="CarRentalform" class="formH text-dark"> Car Rental Form </h2>
-        <hr class="Cutting_hr_right" />
+        <hr class="Pendingrent" />
 
         <form class="CustomerForm" asp-action="SaveRental" asp-controller="Pending_Rentals" method="post">
+        @*start*@
+        <table>
+            <tr>
+                <td>
+                    <div class="Plabels">
+                        <label>Car Id</label><br />
+                        <input type="number" class="Pinputs" asp-for="Car_Id" readonly /><br />
+                        <span class="text-danger" asp-validation-for="Car_Id"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class ="Plabels">
+                        <label>Customer Name<span class="required-Star">&star;</span></label><br />
+                        <input type="text" class="Pinputs" asp-for="Customer_Name" placeholder="Enter Your Name" /><br />
+                        <span class="text-danger" asp-validation-for="Customer_Name"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="Plabels">
+                        <label>Customer Mobile No.<span class="required-Star">&star;</span></label><br />
+                        <input type="number" class="Pinputs" asp-for="Customer_Mobile_No" placeholder="Enter Your Mobile Number" /><br />
+                        <span class="text-danger" asp-validation-for="Customer_Mobile_No"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="Plabels">
+                        <label>Customer Addhar number<span class="required-Star">&star;</span></label><br />
+                        <input type="number" class="Pinputs" asp-for="Customer_Addhar_No" placeholder="Enter Your Name" /><br />
+                        <span class="text-danger" asp-validation-for="Customer_Addhar_No"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="Plabels">
+                        <label>Customer City<span class="required-Star">&star;</span></label><br />
+                        <input type="text" class="Pinputs" asp-for="Customer_Home_City" placeholder="Enter Your City" /><br />
+                        <span class="text-danger" asp-validation-for="Customer_Home_City"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="Plabels">
+                        @{
+                            var mail = HttpContextAccessor.HttpContext.Session.GetString("UserEmail");
+                        }
+                        <input class="Pinputs" asp-for="Customer_Email_id" value="@mail" hidden readonly />
 
-            <label>Car Id</label><br />
-            <input class="col-sm-9" asp-for="Car_Id" readonly/><br />
-            <span class="text-danger" asp-validation-for="Car_Id"></span><br />
-
-            <label>Customer Name</label><br />
-            <input class="col-sm-9" asp-for="Customer_Name" placeholder="Enter Your Name" /><br />
-            <span class="text-danger" asp-validation-for="Customer_Name"></span><br />
-
-            <label>Customer Mobile No.</label><br />
-            <input class="col-sm-9" asp-for="Customer_Mobile_No" placeholder="Enter Your Mobile Number" /><br />
-            <span class="text-danger" asp-validation-for="Customer_Mobile_No"></span><br />
-
-            <label>Customer Addhar number</label><br />
-            <input class="col-sm-9" asp-for="Customer_Addhar_No" placeholder="Enter Your Name" /><br />
-            <span class="text-danger" asp-validation-for="Customer_Addhar_No"></span><br />
-
-            <label>Customer City</label><br />
-            <input class="col-sm-9" asp-for="Customer_Home_City" placeholder="Enter Your City" /><br />
-            <span class="text-danger" asp-validation-for="Customer_Home_City"></span><br />
-
-            <label>Customer Address</label><br />
-            @*<input class="col-sm-9" asp-for="Customer_Home_Address" placeholder="Enter Your Home Address" /><br />*@
-            <textarea class="col-sm-9" asp-for="Customer_Home_Address" placeholder="Enter Your Home Address" rows="4" cols="50"></textarea>
-            <span class="text-danger" asp-validation-for="Customer_Home_Address"></span><br />
-
-            @{
-                var mail = HttpContextAccessor.HttpContext.Session.GetString("UserEmail");
-            }
-            <input class="col-sm-9" asp-for="Customer_Email_id" value="@mail" hidden readonly/>
-
-            <label>Car Plate Number</label><br />
-            <input class="col-sm-9" asp-for="Plate_Number" readonly/><br />
-            <span class="text-danger" asp-validation-for="Plate_Number"></span><br />
-
-            <label>Model</label><br />
-            <input class="col-sm-9" type="text" asp-for="Model" readonly/> <br />
-            <span class="text-danger" asp-validation-for="Model"></span><br />
-
-            <label>Price</label><br />
-            <input class="col-sm-9" type="text" asp-for="Price" readonly/> <br />
-            <span class="text-danger" asp-validation-for="Price"></span><br />
-
-            <label>Rent date</label><br />
-            <input class="col-sm-9" type="datetime-local" asp-for="Rent_Date" value="" /> <br />
-            <span class="text-danger" asp-validation-for="Rent_Date"></span><br />
-
-            <label>Return date</label><br />
-            <input class="col-sm-9" type="datetime-local" asp-for="Return_Date" value=""/> <br />
-            <span class="text-danger" asp-validation-for="Return_Date"></span><br />
-
-            <input class="col-sm-9 btn btn-outline-warning" type="submit" value="Rent" />
-
+                        <label>Car Plate Number</label><br />
+                        <input class="Pinputs" asp-for="Plate_Number" readonly /><br />
+                        <span class="text-danger" asp-validation-for="Plate_Number"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="Plabels">
+                        <label>Model</label><br />
+                        <input class="Pinputs" type="text" asp-for="Model" readonly /> <br />
+                        <span class="text-danger" asp-validation-for="Model"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="Plabels">
+                        <label>Price</label><br />
+                        <input class="Pinputs" type="text" asp-for="Price" readonly /> <br />
+                        <span class="text-danger" asp-validation-for="Price"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="Plabels">
+                        <label>Rent date<span class="required-Star">&star;</span></label><br />
+                        <input class="Pinputs" type="datetime-local" asp-for="Rent_Date" value="" /> <br />
+                        <span class="text-danger" asp-validation-for="Rent_Date"></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="Plabels">
+                        <label>Return date<span class="required-Star">&star;</span></label><br />
+                        <input class="Pinputs" type="datetime-local" asp-for="Return_Date" value="" /> <br />
+                        <span class="text-danger" asp-validation-for="Return_Date"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="Plabels">
+                        <label>Customer Address<span class="required-Star">&star;</span></label><br />
+                        <textarea asp-for="Customer_Home_Address" placeholder="Enter Your Home Address" rows="2" cols="47"></textarea>
+                        <span class="text-danger" asp-validation-for="Customer_Home_Address"></span><br />
+                    </div>
+                </td>
+                <td>
+                    <div class="Plabels">
+                        <br />
+                        <input id="submit-button" class="btn btn-outline-warning" type="submit" value="Rent" />
+                    </div>
+                </td>
+            </tr>
+        </table>
         </form>
+        @*end*@
     </div>
     <div class="column">
         <img id="rightcolimg" src="~/AdminPanelCars/Mustang Gt.png" />

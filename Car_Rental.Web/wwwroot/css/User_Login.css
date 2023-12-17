@@ -148,3 +148,24 @@ m {
     overflow: scroll;
     scroll-direction: horizontal;
 }
+
+                                     /*Add_Pending_Rentals*/
+.Plabels {
+    text-align: left;
+}
+
+.Pinputs {
+    width: 48vh;
+}
+
+#submit-button {
+    width: 48vh;
+}
+
+.required-Star {
+    font-size: 80%;
+    color: red;
+}
+.Pendingrent {
+    margin-right:-16vh;
+}

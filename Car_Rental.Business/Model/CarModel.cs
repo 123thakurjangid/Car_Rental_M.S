@@ -18,18 +18,18 @@ namespace Car_Rental.Business.Model
         public int Car_Id { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Required(ErrorMessage = "Please Enter Car Plate Num!")]
+        [Required(ErrorMessage = "* Please Enter Car Plate Num!")]
         public string? Plate_Number { get; set; }
-        [Required(ErrorMessage = "Please Enter Car Company!")]
+        [Required(ErrorMessage = "* Please Enter Car Company!")]
         public string? Company { get; set; }
-        [Required(ErrorMessage = "Please Enter Car Model!")]
+        [Required(ErrorMessage = "* Please Enter Car Model!")]
         public string? Model { get; set; }
-        [Required(ErrorMessage = "Please Enter Car Price!")]
-        [Range(500, 7000, ErrorMessage = "Price must be in 500 to 7000!")]
+        [Required(ErrorMessage = "* Please Enter Car Price!")]
+        [Range(500, 7000, ErrorMessage = "* Price must be in 500 to 7000!")]
         public int Price { get; set; }
-        [Required(ErrorMessage = "Please Enter Car Color!")]
+        [Required(ErrorMessage = "* Please Enter Car Color!")]
         public string? Color { get; set; }
-        [Required(ErrorMessage = "Please Enter Car Available or Not!")]
+        [Required(ErrorMessage = "* Please Enter Car Available or Not!")]
         public string? Available { get; set; }
 
     }
@@ -37,29 +37,32 @@ namespace Car_Rental.Business.Model
     /*for passing data with the help of userhome -> select*/
     public class User_Home_SelectModel
     {
-        [Required(ErrorMessage = "Please Enter id !")]
+        [Required(ErrorMessage = "* Please Enter id !")]
         public int Car_Id { get; set; }
-        [Required(ErrorMessage = "Please Enter Name !")]
+        [Required(ErrorMessage = "* Please Enter Name !")]
         public string? Customer_Name { get; set; }
-        [Required(ErrorMessage = "Please Enter your addhar number !")]
+        [Required(ErrorMessage = "* Please Enter your addhar number !")]
+        [StringLength(12, MinimumLength = 12, ErrorMessage = "* numbers must be equals to 12 in length.")]
         public string? Customer_Addhar_No { get; set; }
-        [Required(ErrorMessage = "Please enter your mobile number !")]
+        [Required(ErrorMessage = "* Please enter your mobile number !")]
+        [StringLength(10, MinimumLength = 10, ErrorMessage = "* numbers must be equals to 10 in length.")]
         public string? Customer_Mobile_No { get; set; }
-        [Required(ErrorMessage = "Please enter Home address !")]
+        [Required(ErrorMessage = "* Please enter Home address !")]
         public string? Customer_Home_Address { get; set; }
-        [Required(ErrorMessage = "Please enter your home city !")]
+        [Required(ErrorMessage = "* Please enter your home city !")]
         public string? Customer_Home_City { get; set; }
-        [Required(ErrorMessage = "Please Enter rent date !")]
+        [Required(ErrorMessage = "* Please Enter rent date !")]
         public DateTime Rent_Date { get; set; }
-        [Required(ErrorMessage = "Please Enter return date !")]
+        [Required(ErrorMessage = "* Please Enter return date !")]
         public DateTime Return_Date { get; set; }
-        [Required(ErrorMessage = "Please Enter Plate number !")]
+        [Required(ErrorMessage = "* Please Enter Plate number !")]
         public string? Plate_Number { get; set; }
-        [Required(ErrorMessage = "Please Enter car model !")]
+        [Required(ErrorMessage = "* Please Enter car model !")]
         public string? Model { get; set; }
-        [Required(ErrorMessage = "Please Enter car Price !")]
+        [Required(ErrorMessage = "* Please Enter car Price !")]
         public int Price { get; set; }
-        [Required(ErrorMessage = "Please Enter Customer Email Id !")]
+        [Required(ErrorMessage = "* Please Enter Customer Email Id !")]
+        [EmailAddress]
         public string? Customer_Email_id { get; set; }
     }
 }

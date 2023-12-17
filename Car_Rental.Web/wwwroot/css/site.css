@@ -272,6 +272,10 @@ a.facebookBtn.smGlobalBtn.active {
 
 /* copright section start */
 
+.no-bullets {
+    list-style-type: none;
+}
+
 .copyright_section {
     width: 100%;
     float: left;
