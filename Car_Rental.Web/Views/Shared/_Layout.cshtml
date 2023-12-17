@@ -29,22 +29,22 @@
                             var logby = HttpContextAccessor.HttpContext.Session.GetString("LoginBy");
                             if (logby == "Customer")
                             {
-                                <li class="nav-item1">
+                                <li class="nav-item1 Nav_Hover">
                                     <a style="cursor:pointer" class="nav-link text-dark" data-bs-toggle="offcanvas" data-bs-target="#demo">Menu</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item Nav_Hover">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Customers_Car_Inventory">Home</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item Nav_Hover">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Customer_Home_Page">Cars</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item Nav_Hover">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Customer_PendingRentals">Pending Rents</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item Nav_Hover">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogOut">LogOut</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item Nav_Hover">
                                     @{
                                         var Userimgs = @HttpContextAccessor.HttpContext.Session.GetString("UserImg");
                                         if(Userimgs != null)
@@ -64,7 +64,7 @@
 
                                     } 
                                 </li>
-                                <li class="nav-item UserName">
+                                <li class="nav-item Nav_Hover UserName">
 
                                     <a class="nav-link text-dark text-uppercase">
                                         @{
@@ -86,28 +86,28 @@
                             }
                             else
                             {
-                                <li class="nav-item1">
+                                <li class="nav-item1 Nav_Hover">
                                     <a style="cursor:pointer" class="nav-link text-dark" data-bs-toggle="offcanvas" data-bs-target="#demo">Menu</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item Nav_Hover">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Admin_Pannel">Home</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item Nav_Hover">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="AvailableCars">Cars</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item Nav_Hover">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Customers">Customers</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item Nav_Hover">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="OfflineCustomers">Offline Customers</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item Nav_Hover">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Customer_PendingRentals">Rentals</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item Nav_Hover">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogOut">LogOut</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item Nav_Hover">
                                     @{
                                         var Userimgs = @HttpContextAccessor.HttpContext.Session.GetString("UserImg");
                                         if (Userimgs != null)
@@ -125,22 +125,23 @@
 
                                     }
                                 </li>
-                                <li class="nav-item">
-                                    
-                                    <a id="user" class="nav-link text-dark text-uppercase">
-                                        @{
-                                  
-                                            var username = HttpContextAccessor.HttpContext.Session.GetString("UserEmail").ToUpper();
+                                <li class="nav-item Nav_Hover">
 
+                                    <a class="nav-link text-dark text-uppercase">
+                                        @{
+                                            var user_id = HttpContextAccessor.HttpContext.Session.GetInt32("UserID");
+                                            var username = HttpContextAccessor.HttpContext.Session.GetString("UserEmail").ToUpper();
+                                            var final_User_Name = "";
                                             foreach (var it in username)
                                             {
                                                 if (it == '@')
                                                 {
                                                     break;
                                                 }
-                                                @it;
+                                                final_User_Name += it;
                                             }
                                         }
+                                        <div class="ProfileLink"><a> @Html.ActionLink(final_User_Name, "UserProfileUpdate", "User", new { id = user_id}) </a></div>
                                     </a>
                                 </li>
 
@@ -186,10 +187,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
-                <p><a class="nav-link text-dark" asp-controller="Admin" asp-action="Add_New_Car">&#128073; Add New Cars in Garage</a></p>
-                <p><a class="nav-link text-dark" asp-controller="User" asp-action="Add_New_Customer">&#128073; Add New Offline Customer</a></p>
-                <p><a class="nav-link text-dark" asp-controller="Pending_Rentals" asp-action="Renting_For_Offline_Customers">&#128073; Rent A Car for Offline Customer</a></p>
-                <p><a class="nav-link text-dark" asp-controller="Pending_Rentals" asp-action="Show_History">&#128073; All Rentals History</a></p>
+                <p class="menu-link"><a class="nav-link text-dark menu-links" asp-controller="Admin" asp-action="Add_New_Car">&#128073; Add New Cars in Garage</a></p>
+                <p class="menu-link"><a class="nav-link text-dark menu-links" asp-controller="User" asp-action="Add_New_Customer">&#128073; Add New Offline Customer</a></p>
+                <p class="menu-link"><a class="nav-link text-dark menu-links" asp-controller="Pending_Rentals" asp-action="Renting_For_Offline_Customers">&#128073; Rent A Car for Offline Customer</a></p>
+                <p class="menu-link"><a class="nav-link text-dark menu-links" asp-controller="Pending_Rentals" asp-action="Show_History">&#128073; All Rentals History</a></p>
+                <p class="menu-link"><a class="nav-link text-dark menu-links" asp-controller="Admin" asp-action="Track_Live_Location">&#128073; Track Cars live Location</a></p>
             </div>
         </div>
         }

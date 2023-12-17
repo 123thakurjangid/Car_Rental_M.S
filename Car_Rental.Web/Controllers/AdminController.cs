@@ -221,5 +221,11 @@ namespace Car_Rental.Web.Controllers
             TempData["Message"] = "Information Not Update";
             return RedirectToAction("AvailableCars", "Admin");
         }
+
+        public IActionResult Track_Live_Location()
+        {
+            return View();
+        }
     }
+
 }

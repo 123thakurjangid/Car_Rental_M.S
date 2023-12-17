@@ -1,10 +1,23 @@
-/* User Update form section start */
+                                    /*navigation bar*/
+.Nav_Hover :hover{
+    text-decoration:underline;
+    text-underline-offset:2px;
+}
+                                    /*menu_bar_Links*/
+
+.menu-link :hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    border:1px solid black;
+}
+
+                            /* User Update form section start */
 .profile-pich {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    margin-right:51vh;
-    margin-left:66vh;
+    margin-right: 51vh;
+    margin-left: 66vh;
 }
 
 .profile-pich img {
@@ -15,9 +28,9 @@
     border: 2px solid #fff;
     margin-left:50vh;
 }
-/* User update form section end */
+                            /* User update form section end */
 
-/* Admin Update form section start */
+                            /* Admin Update form section start */
 .Aprofile-pich {
     width: 45px;
     height: 45px;
@@ -34,12 +47,16 @@
     border-radius: 50%;
     border: 2px solid #fff;
 }
-/* Admin update form section end */
 
+.ProfileLink {
+    margin-top: -22.5px;
+    margin-left: 1vh;
+}
+                            /* Admin update form section end */
 .UserName {
     margin-top: -1vh;
 }
-/* Admin update form section end */
+                            /* Admin update form section end */
 html {
     font-size: 14px;
 }
@@ -65,17 +82,16 @@ body {
 .nav-item1{
     box-shadow:-2px 2px 2px white;
 }
-
-                                /* footer section start */
-
-.footer_section {
-    width: 100%;
-    float: left;
-    background-color: black;
-    height: auto;
-    padding: 90px 0px;
-    margin-top: 3vh;
-}
+    
+                                    /* footer section start */
+    .footer_section {
+        width: 100%;
+        float: left;
+        background-color: black;
+        height: auto;
+        padding: 90px 0px;
+        margin-top: 3vh;
+    }
 
 .footer_location_text {
     width: 100%;
