@@ -427,6 +427,15 @@ namespace Car_Rental.Web.Controllers
                 return View("UpdateCustomer", model);
             }
 
+            string? UserName = HttpContext.Session.GetString("UserEmail");
+            string? UserID = HttpContext.Session.GetString("UserID");
+            string? loginby = HttpContext.Session.GetString("LoginBy");
+
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserID))
+            {
+                return RedirectToAction("Login_Form");
+            }
+
             var user = await _loginDbContext.Login.FindAsync(model.Id);
 
             if (user != null)
@@ -449,11 +458,21 @@ namespace Car_Rental.Web.Controllers
                 user.USER_EMAIL = model.User_Email;
                 user.USER_PASSWORD = model.User_Password;
                 var filepath = "/image/";
-                user.ATTACHMENTURL = filepath + model.Attachmentfile.FileName;
+                if(model.Attachmentfile != null) {
+                    user.ATTACHMENTURL = filepath + model.Attachmentfile.FileName;
+                }
 
                 await _loginDbContext.SaveChangesAsync();
                 TempData["Message"] = "Profile Updated Successfully , its shows when you Login Next Time";
-                return RedirectToAction("Customers_Car_Inventory", "Admin");
+                if(loginby == "Customer")
+                {
+                    return RedirectToAction("Customers_Car_Inventory", "Admin");
+                }
+                else
+                {
+                    return RedirectToAction("Admin_Pannel", "Admin");
+                }
+       
             }
 
             TempData["Message"] = "Details Not Update";
@@ -474,6 +493,31 @@ namespace Car_Rental.Web.Controllers
             List<Pending_RentalsModel> Rentals = new List<Pending_RentalsModel>();
             Rentals = _pendingRentalsService.GetRentals();
             return View(Rentals);
+
+        }
+
+        [HttpGet]
+        public IActionResult Specific_Customer_Pending_Rentals()
+        {
+            string? UserName = HttpContext.Session.GetString("UserEmail").ToUpper();
+            string? UserID = HttpContext.Session.GetString("UserID");
+
+            if (string.IsNullOrEmpty(UserName) || string.IsNullOrEmpty(UserID))
+            {
+                return RedirectToAction("Login_Form");
+            }
+
+            List<Pending_RentalsModel> Rentals = new List<Pending_RentalsModel>();
+            Rentals = _pendingRentalsService.GetRentals();
+            if (UserName != null)
+            {
+                var data = Rentals.Where(Model => Model.Customer_Email_Id.ToUpper() == UserName).ToList();
+                return View(data);
+            }
+            else
+            {
+                return View();
+            }
 
         }
 

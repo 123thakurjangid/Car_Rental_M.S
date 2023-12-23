@@ -1,0 +1,158 @@
+﻿@model IEnumerable<Car_Rental.Business.Model.Pending_RentalsModel>
+@inject IHttpContextAccessor HttpContextAccessor
+
+<h1>Pending Rentals</h1>
+<hr />
+<div class="CustomerPendigRentals">
+    <table class="table table-striped table-hover">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer_Addhar_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer_Mobile_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer_Home_City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer_Home_Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer_Email_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Plate_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rent_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Return_Date)
+            </th>
+            <th>
+                Fees
+            </th>
+            <th>
+                Final Fee <br /> Fee+Panlty
+            </th>
+            <th>
+                Status
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Car_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer_Name)
+                </td>
+                <td>
+                    @{
+                        string addharnum = item.Customer_Addhar_No;
+                        string realaddhar = "";
+                        int cnt = 0;
+                        for (int i = 0; i < 12; i++)
+                        {
+                            realaddhar += addharnum[i];
+                            cnt++;
+                            if (cnt == 4 && i < 10)
+                            {
+                                realaddhar += '-';
+                                cnt = 0;
+                            }
+                        }
+                        @Html.DisplayFor(modelItem => realaddhar)
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer_Mobile_No)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer_Home_City)
+                </td>
+                <td>
+                    91+ @Html.DisplayFor(modelItem => item.Customer_Home_Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer_Email_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Plate_Number)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rent_Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Return_Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @{
+                        var expiredate = item.Return_Date;
+                        var currentdate = DateTime.Now;
+                        var Panlty = 200 * (currentdate - expiredate).Days;
+                        var Late_day = (currentdate - expiredate).Days;
+                        var Total_Fee = item.Price + Panlty;
+
+                    }
+
+                    @if (Late_day <= 0)
+                    {
+                        <div class="myDIV">@item.Price <i class="fa fa-eye"></i></div>
+                        <div class="hide popup">Extra_days = 0 days Rental_panlty = 0₹ Total_Fee =<u>@item.Price</u></div>
+                    }
+                    else
+                    {
+                        <div class="myDIV">@Total_Fee <i class="fa fa-eye"></i></div>
+                        <div class="hide popup">Extra_days = @Late_day days Rental_panlty = @Panlty₹ Total_Fee =<u>@Total_Fee</u></div>
+                    }
+                </td>
+                <th>
+                    Booked
+                </th>
+                <td>
+                    @if (HttpContextAccessor.HttpContext.Session.GetString("UserEmail").ToUpper() == item.Customer_Email_Id.ToUpper() ||
+                   HttpContextAccessor.HttpContext.Session.GetString("LoginBy") != "Customer")
+                    {
+                        if (HttpContextAccessor.HttpContext.Session.GetString("LoginBy") != "Customer")
+                        {
+                            @Html.ActionLink("Delete", "Delete","Pending_Rentals", new { id = item.Car_Id}, new{@class = "btn btn-danger btn-sm"})
+                        }
+                        else if (Panlty <= 0)
+                        {
+                            @Html.ActionLink("Delete", "Delete","Pending_Rentals", new { id = item.Car_Id}, new{@class = "btn btn-danger btn-sm"})
+                        }
+                        else
+                        {
+                            <button class="btn btn-danger btn-sm"> <strike onclick="myFunction()">Delete</strike> </button>
+                        }
+
+                    }
+                    else
+                    {
+                        <button class="btn btn-danger btn-sm"> <strike onclick="myFunction1()">Delete</strike> </button>
+
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+</div>

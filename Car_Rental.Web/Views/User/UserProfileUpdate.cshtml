@@ -3,13 +3,20 @@
 
 <div class="row">
     <div class="column">
-
-        <img id="rightcolimg" src="~/Car_Images/Customers.png" />
-
+        @if (HttpContextAccessor.HttpContext.Session.GetString("LoginBy") != "Customer")
+        {
+            <h1>Wellcome Back Admin!</h1>
+            <p>I am glad to see you back online today is a great day!</p>
+            <img style="margin-top:7vh;" src="~/Car_Images/Customers.png"/>
+        }
+        else
+        {
+            <img id="rightcolimg" src="~/Car_Images/Customers.png" />
+        }
     </div>
     <div class="column">
 
-        <h2 class=" text-dark">Update Your Profile</h2>
+        <h2 class=" text-dark">Update Profile</h2>
         <hr id="hr" />
 
         <div class="profile-pic">

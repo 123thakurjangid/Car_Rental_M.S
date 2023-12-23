@@ -38,7 +38,7 @@ namespace Car_Rental.Web.Controllers
                         bool history = _historyService.Add_Rentals_History(rmodel); //for Saving History
 
                         TempData["Message"] = "Car Rented";
-                        return RedirectToAction("Customer_PendingRentals", "User");
+                        return RedirectToAction("Specific_Customer_Pending_Rentals", "User");
                     }
                     else
                     {
@@ -119,7 +119,7 @@ namespace Car_Rental.Web.Controllers
             {
                 TempData["Message"] = "Rental not Deleted !";
             }
-            return RedirectToAction("Customer_PendingRentals", "User");
+            return RedirectToAction("Specific_Customer_Pending_Rentals", "User");
         }
 
         [HttpGet]

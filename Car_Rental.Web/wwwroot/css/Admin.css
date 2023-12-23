@@ -29,13 +29,18 @@ td{
     float:left;
     width:50%;
 }
-.row:after{
-    display:table;
-    clear:both;
+.column1{
+    width:60vh;
+    margin-left:18vh;
+    margin-top:2vh;
+}
+.row:after {
+    display: table;
+    clear: both;
 }
 #rightcolimg{
     margin-left:0%;
-    padding-top:20vh;
+    padding-top:15vh;
 }
 
 .row {
