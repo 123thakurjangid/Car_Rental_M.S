@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Car_Rental.Business.Model.LocationModel>
+
+<h1>All On Location Requests</h1>
+<hr />
+
+<table class="table table-striped table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Current_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Distance_Km)
+        </th>
+        <th>
+            Live Location
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer_Id)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer_Name)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Current_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Distance_Km)
+            </td>
+            <td>
+                <a target="_top" href="http://www.google.com/maps/place/@item.latitude,@item.longitude">Location <i class="fa text-danger">&#xf041;</i></a>
+
+            </td>
+        </tr>
+    }
+
+</table>

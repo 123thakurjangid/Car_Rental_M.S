@@ -1,0 +1,82 @@
+﻿@model Car_Rental.Business.Model.LocationModel
+
+<div class="heading-div" style="box-shadow: 0 0 10px rgba(0,0,0,0.6)">
+    <h1><b>Wellcome To On Location Car Service</b></h1>
+    <p class="Center_p"><b>We want to know your current location and what kind of problem in you, for provide you service </b></p>
+</div>
+<hr />
+
+<div class="main-div">
+
+    <div class="left-col">
+        <h4 class="stp1">Step1 &#8595;</h4>
+        <hr />
+        <h4>Check service is available or not on your location</h4>
+        <img src="~/Car_Images/Car real_time locater.jpg" />
+        <ol>
+            <li>We are try to provide service on your location.</li>
+            <li class="car_service_li">Only on location payment method available.</li>
+        </ol>
+
+        <p class="hideen_content">Your location is <span id="latitude">0.00</span>° latitude by<span id="longitude">0.00</span>° longitude.</p>
+        <p class="hideen_content" id="ans"></p>
+        <p class="Center_p text-danger" id="ans2">???????????????????</p>
+        <button class="btn btn-warning" id="get-location">Check <i style="font-size:24px" class="fa">&#xf041;</i></button>
+
+    </div>
+
+        <div class="right-col">
+        <h4 class="stp1">Step2 &#8595;</h4>
+        <hr />
+            <h4>Fill Important Details</h4>
+            <form asp-action="Save_Location" asp-controller="On_Location_Service_" method="post">
+
+                <div class="label-div">
+                    <label>Your Name </label>
+                </div>
+                <input class="col-sm-9 mg" asp-for="Customer_Name" type="text" placeholder="enter your name" /><br />
+                <span class="text-danger" asp-validation-for="Customer_Name"></span>
+
+                <div class="label-div">
+                    <label>Your Mobile Number </label>
+                </div>
+                <input class="col-sm-9 mg" asp-for="Mobile_Number" type="text" placeholder="enter your number" /><br />
+                <span class="text-danger " asp-validation-for="Mobile_Number"></span>
+
+                <div class="label-div">
+                    <label>Your Aadhar Number </label>
+                </div>
+                <input class="col-sm-9 mg" asp-for="Aadhaar_Number" type="text" placeholder="enter your addhar number" /><br />
+                <span class="text-danger " asp-validation-for="Aadhaar_Number"></span>
+
+                <div class="label-div">
+                    <label>Your Home Address </label>
+                </div>
+                <input class="col-sm-9 mg" asp-for="Home_Address" type="text" placeholder="enter your address" /><br />
+                <span class="text-danger " asp-validation-for="Home_Address"></span>
+
+                <div class="label-div">
+                    <label>Your Car Name</label>
+                </div>
+                <input class="col-sm-9 mg" asp-for="Car_Name" type="text" placeholder="enter your car name" /><br />
+                <span class="text-danger " asp-validation-for="Car_Name"></span>
+
+                <div class="label-div">
+                    <label>What Kind Car Problem You Have </label>
+                </div>
+                <textarea asp-for="Car_Problem" cols="63" rows="2"></textarea><br />
+                <span class="text-danger" asp-validation-for="Car_Problem"></span><br />
+
+                <input asp-for="Current_date" class="col-sm-9 mg" type="text" value="@DateTime.Now" placeholder="Enter Current date" hidden readonly/>
+
+                <input asp-for="Distance_Km" id="GettingDistance" class="col-sm-9 mg" type="text" placeholder="enter Distance" hidden readonly/>
+
+                <input asp-for="latitude" id="GettingLatitude" class="col-sm-9 mg" type="text" placeholder="enter your latitude" hidden readonly/>
+
+                <input asp-for="longitude" id="GettingLongitude" class="col-sm-9 mg" type="text" placeholder="enter your latitude" hidden readonly/>
+
+                <button class="col-sm-9 btn btn-warning mg" type="submit">Submit</button>
+            </form>
+        </div>
+
+</div>

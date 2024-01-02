@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="~/css/Admin.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Customer.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Panlty_PopUp.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Car_Services.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -173,8 +175,7 @@
                       <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                   </div>
                   <div class="offcanvas-body">
-                      <p>Available Soon...</p>
-                      <p>Available Soon...</p>
+                <p class="menu-link"><a class="nav-link text-dark menu-links" asp-controller="On_Location_Service_" asp-action="Car_Service">&#128073; Request On Location Service immediately</a></p>
                   </div>
               </div>
               @*Menue bar Code Ending*@
@@ -192,6 +193,8 @@
                 <p class="menu-link"><a class="nav-link text-dark menu-links" asp-controller="Pending_Rentals" asp-action="Renting_For_Offline_Customers">&#128073; Rent A Car for Offline Customer</a></p>
                 <p class="menu-link"><a class="nav-link text-dark menu-links" asp-controller="Pending_Rentals" asp-action="Show_History">&#128073; All Rentals History</a></p>
                 <p class="menu-link"><a class="nav-link text-dark menu-links" asp-controller="Admin" asp-action="Track_Live_Location">&#128073; Track Cars live Location</a></p>
+                <p class="menu-link"><a class="nav-link text-dark menu-links" asp-controller="On_Location_Service_" asp-action="On_Service_Requests">&#128073; See On Location Requests</a></p>
+
             </div>
         </div>
         }
@@ -249,6 +252,7 @@
             <!-- copyright section end -->
         }
     </>
+    <script src="~/js/On_Location_Service.js" asp-append-version="true"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

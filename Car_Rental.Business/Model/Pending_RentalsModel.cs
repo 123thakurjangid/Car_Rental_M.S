@@ -17,9 +17,11 @@ namespace Car_Rental.Business.Model
         public int Car_Id { get; set; }
         [Required(ErrorMessage = "* Please enter your Name !")]
         public string? Customer_Name { get; set; }
+        [Required(ErrorMessage = "* Please enter your aadhaar number !")]
         [StringLength(12, ErrorMessage = "* Addhar degits must be 12 !")]
         public string? Customer_Addhar_No { get; set; }
-        [Required(ErrorMessage = "* Please enter your mobile number !")]
+        [Required(ErrorMessage = "* Please Enter the Phone number !")]
+        [StringLength(10, MinimumLength = 10, ErrorMessage = "* numbers must be equals to 10 in length.")]
         public string? Customer_Mobile_No { get; set; }
         [Required(ErrorMessage = "* Please enter Home address !")]
         public string? Customer_Home_Address { get; set; }

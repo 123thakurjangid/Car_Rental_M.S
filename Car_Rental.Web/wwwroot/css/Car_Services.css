@@ -1,0 +1,52 @@
+﻿.heading-div h1, .Center_p{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.hideen_content {
+    display: none;
+}
+.heading-div h1 {
+    margin-top: 5vh;
+}
+
+.main-div {
+    display: flex;
+}
+
+.main-div .left-col, .right-col {
+        width: 50%;
+        text-align: center;
+}
+
+.label-div {
+    text-align: left;
+    margin-left: 10.5vh;
+    margin-right: 10.5vh;
+}
+
+.right-col .mg {
+    margin-bottom: 1.5vh;
+}
+
+.left-col ol {
+    list-style-type: none;
+}
+
+.left-col ol {
+    margin: 2.5vh;
+    color: blue;
+}
+
+.car_service_li {
+    margin-bottom: 2vh;
+}
+.map_pin {
+    color: red;   
+}
+#ans2{
+    margin-top:-0.1px;
+}
+.stp1{
+    margin-top:-2vh;
+    margin-bottom:-2vh;
+}
