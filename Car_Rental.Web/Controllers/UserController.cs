@@ -553,8 +553,8 @@ namespace Car_Rental.Web.Controllers
                 {
                     if (MAIL != null)
                     {
-                        string fromMail = "123thakurjangid@gmail.com";
-                        string fromPassword = "fdxbcnpxstughuml";
+                        string fromMail = "";
+                        string fromPassword = "";
 
                         MailMessage message = new MailMessage();
                         message.From = new MailAddress(fromMail);
