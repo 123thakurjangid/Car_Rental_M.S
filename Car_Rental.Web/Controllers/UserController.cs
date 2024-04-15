@@ -369,8 +369,8 @@ namespace Car_Rental.Web.Controllers
 
             try
             {
-                string fromMail = "123thakurjangid@gmail.com";
-                string fromPassword = "fdxbcnpxstughuml";
+                string fromMail = "";
+                string fromPassword = "";
 
                 MailMessage message = new MailMessage();
                 message.From = new MailAddress(fromMail);
